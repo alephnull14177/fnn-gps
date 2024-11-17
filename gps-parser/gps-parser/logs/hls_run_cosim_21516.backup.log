@@ -1,0 +1,74 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/gps-parser.hlsrun_cosim_summary, at Sat Nov 16 22:44:26 2024
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run cosim -work_dir /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser -config /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg -cmdlineconfig /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2.1 (64-bit)
+  **** SW Build 4070103 on Dec 13 2023
+  **** IP Build 4080415 on Thu Dec 14 21:01:57 MST 2023
+  **** SharedData Build 4077621 on Mon Dec 11 00:23:44 MST 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2023.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'mark.gross' on host 'ece-lnx-4511c.ad.ufl.edu' (Linux_x86_64 version 3.10.0-1160.108.1.el7.x86_64) on Sat Nov 16 22:44:28 EST 2024
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.9 (Maipo)"
+INFO: [HLS 200-10] In directory '/ecel/UFAD/mark.gross/fnn-gps/gps-parser'
+INFO: [HLS 200-1909] Reading HLS ini file /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg
+INFO: [HLS 200-1909] Reading HLS ini file /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/config.cmdline
+INFO: [HLS 200-2005] Using work_dir /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser 
+INFO: [HLS 200-1510] Running: open_project /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser -diskless 
+INFO: [HLS 200-1510] Running: open_solution hls 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: apply_ini /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg 
+INFO: [HLS 200-1909] Reading HLS ini file /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg
+INFO: [HLS 200-1465] Applying ini 'syn.file=parser.cpp' at /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=parser.h' at /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file '/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.h' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=parser_tb.cpp' at /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file '/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=gps_translation' at /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' at /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' at /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying ini 'clock=100' at /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 100ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' at /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg(5)
+INFO: [HLS 200-1510] Running: apply_ini /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/config.cmdline 
+INFO: [HLS 200-1909] Reading HLS ini file /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/config.cmdline
+INFO: [HLS 200-1510] Running: cosim_design 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/tools/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling parser_tb.cpp_pre.cpp.tb.cpp
+   Compiling apatb_gps_translation_util.cpp
+   Compiling apatb_gps_translation.cpp
+   Compiling parser.cpp_pre.cpp.tb.cpp
+   Compiling apatb_gps_translation_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Input stream: A6*W,1.300,493032,4.480,4.220,E,000.13110,N,830.7084,A,915321,CMRPG$
+
+
+ERROR: System received a signal named SIGSEGV and the program has to stop immediately!
+This signal was generated when a program tries to read or write outside the memory that is allocated for it, or to write memory that can only be read.
+Possible cause of this problem may be:
+  1) Missing depth information for one or more pointers to arrays in the interface;
+  2) Insufficient depth setting for array argument(s);
+  3) Excessive depth setting for array argument(s), that exceeds the maximum virtual memory size for the process;
+  4) Null pointer etc.
+Current execution stopped during CodeState = CALL_C_DUT.
+You can search CodeState variable name in apatb*.cpp file under ./sim/wrapc dir to locate the position.
+
+ERROR: [COSIM 212-360] Aborting co-simulation: C TB simulation failed.
+ERROR: [COSIM 212-320] C TB testing failed, stop generating test vectors. Please check C TB or re-run cosim.
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 10.48 seconds. CPU system time: 1.09 seconds. Elapsed time: 12.25 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: close_project 
+ERROR: 
+INFO: [HLS 200-112] Total CPU user time: 12.68 seconds. Total CPU system time: 1.36 seconds. Total elapsed time: 14.63 seconds; peak allocated memory: 397.652 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Sat Nov 16 22:44:42 2024...

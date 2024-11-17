@@ -1,0 +1,227 @@
+<ENTRY>
+{
+ "thisFile": "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/gps-parser.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Nov 16 22:45:59 2024",
+ "timestampMillis": "1731815159284",
+ "buildStep": {
+  "cmdId": "576c6cae-fdf2-474c-9ea4-ec4efc44a9f5",
+  "name": "vitis-run",
+  "logFile": "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/logs/gps-parser.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/vitis-run  --mode hls --cosim --config /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg --work_dir gps-parser ",
+  "args": [
+   "--mode",
+   "hls",
+   "--cosim",
+   "--config",
+   "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg",
+   "--work_dir",
+   "gps-parser"
+  ],
+  "iniFiles": [],
+  "cwd": "/ecel/UFAD/mark.gross/fnn-gps/gps-parser"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 16 22:45:59 2024",
+ "timestampMillis": "1731815159284",
+ "status": {
+  "cmdId": "576c6cae-fdf2-474c-9ea4-ec4efc44a9f5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Nov 16 22:46:03 2024",
+ "timestampMillis": "1731815163223",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "gps_translation",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp",
+     "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2023.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Nov 16 22:46:03 2024",
+ "timestampMillis": "1731815163225",
+ "buildStep": {
+  "cmdId": "88e7ae28-18d7-4e74-9e8b-62df09739446",
+  "name": "cosim_design",
+  "logFile": "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/hls.log",
+  "commandLine": "cosim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/ecel/UFAD/mark.gross/fnn-gps/gps-parser"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 16 22:46:03 2024",
+ "timestampMillis": "1731815163226",
+ "status": {
+  "cmdId": "88e7ae28-18d7-4e74-9e8b-62df09739446",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 16 22:46:03 2024",
+ "timestampMillis": "1731815163226",
+ "report": {
+  "path": "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/sim/report/gps_translation_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 16 22:46:03 2024",
+ "timestampMillis": "1731815163226",
+ "report": {
+  "path": "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 16 22:46:03 2024",
+ "timestampMillis": "1731815163227",
+ "report": {
+  "path": "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 16 22:46:03 2024",
+ "timestampMillis": "1731815163227",
+ "report": {
+  "path": "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 16 22:46:03 2024",
+ "timestampMillis": "1731815163227",
+ "report": {
+  "path": "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 16 22:47:07 2024",
+ "timestampMillis": "1731815227401",
+ "status": {
+  "cmdId": "88e7ae28-18d7-4e74-9e8b-62df09739446",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 16 22:47:07 2024",
+ "timestampMillis": "1731815227613",
+ "status": {
+  "cmdId": "576c6cae-fdf2-474c-9ea4-ec4efc44a9f5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 16 22:47:07 2024",
+ "timestampMillis": "1731815227613",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 16 22:47:07 2024",
+ "timestampMillis": "1731815227613",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

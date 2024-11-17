@@ -1,0 +1,6 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:8:21" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:8:21" LoopName="VITIS_LOOP_8_1" ParentFunc="hls_atoi_w_len(char*, unsigned char)"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53:26" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53:26" LoopName="VITIS_LOOP_53_2" ParentFunc="hls_get_field_from_nmea(char const*, unsigned char)"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:23:22" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:23:22" LoopName="VITIS_LOOP_23_1" ParentFunc="gps_translation(hls::stream&lt;char, 0&gt;&amp;, ap_uint&lt;1&gt;, gnss_data_t&amp;, ap_uint&lt;1&gt;&amp;)"/>
+</VitisHLS:BurstInfo>
+

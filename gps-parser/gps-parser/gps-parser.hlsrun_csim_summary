@@ -1,0 +1,157 @@
+<ENTRY>
+{
+ "thisFile": "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/gps-parser.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Nov 16 22:45:03 2024",
+ "timestampMillis": "1731815103156",
+ "buildStep": {
+  "cmdId": "a15b11c8-b0ac-4ca1-a6f1-ee0fbfac2d75",
+  "name": "vitis-run",
+  "logFile": "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/logs/gps-parser.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg --work_dir gps-parser ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg",
+   "--work_dir",
+   "gps-parser"
+  ],
+  "iniFiles": [],
+  "cwd": "/ecel/UFAD/mark.gross/fnn-gps/gps-parser"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 16 22:45:03 2024",
+ "timestampMillis": "1731815103156",
+ "status": {
+  "cmdId": "a15b11c8-b0ac-4ca1-a6f1-ee0fbfac2d75",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Nov 16 22:45:06 2024",
+ "timestampMillis": "1731815106876",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "gps_translation",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp",
+     "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2023.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Nov 16 22:45:06 2024",
+ "timestampMillis": "1731815106877",
+ "buildStep": {
+  "cmdId": "c83ef15d-02fe-47e4-906a-76f0da4030be",
+  "name": "csim_design",
+  "logFile": "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/hls.log",
+  "commandLine": "csim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/ecel/UFAD/mark.gross/fnn-gps/gps-parser"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 16 22:45:06 2024",
+ "timestampMillis": "1731815106878",
+ "status": {
+  "cmdId": "c83ef15d-02fe-47e4-906a-76f0da4030be",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 16 22:45:07 2024",
+ "timestampMillis": "1731815107144",
+ "status": {
+  "cmdId": "c83ef15d-02fe-47e4-906a-76f0da4030be",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 16 22:45:07 2024",
+ "timestampMillis": "1731815107329",
+ "status": {
+  "cmdId": "a15b11c8-b0ac-4ca1-a6f1-ee0fbfac2d75",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 16 22:45:07 2024",
+ "timestampMillis": "1731815107330",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 16 22:45:07 2024",
+ "timestampMillis": "1731815107330",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

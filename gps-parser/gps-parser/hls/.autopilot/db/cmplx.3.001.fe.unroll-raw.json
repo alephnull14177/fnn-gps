@@ -1,0 +1,87 @@
+{
+  "0": {
+    "basicblocks": 18,
+    "calls": "3 1 1 2 2 2 2 2 2 5 5 4",
+    "file": "parser.cpp",
+    "fileloc": 113,
+    "instructions": 147,
+    "loads": {
+      "G": 3,
+      "L": 2,
+      "T": 7
+    },
+    "name": "gps_translation",
+    "stores": {
+      "G": 3,
+      "L": 1,
+      "T": 21
+    },
+    "total_instructions": 1389
+  },
+  "1": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "parser.cpp",
+    "fileloc": 43,
+    "instructions": 31,
+    "loads": {
+      "G": 2
+    },
+    "name": "hls_get_field_from_nmea",
+    "total_instructions": 31
+  },
+  "2": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "parser.cpp",
+    "fileloc": 3,
+    "instructions": 41,
+    "loads": {
+      "L": 3
+    },
+    "name": "hls_atoi_w_len",
+    "total_instructions": 41
+  },
+  "3": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "parser.cpp",
+    "fileloc": 21,
+    "instructions": 26,
+    "loads": {
+      "G": 2
+    },
+    "name": "hls_strncmp",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 26
+  },
+  "4": {
+    "basicblocks": 9,
+    "calls": "",
+    "file": "parser.cpp",
+    "fileloc": 33,
+    "instructions": 68,
+    "loads": {
+      "L": 2
+    },
+    "name": "hls_days_from_civil",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 68
+  },
+  "5": {
+    "basicblocks": 7,
+    "calls": "1 2 2 2 1 1 2 2 2 1",
+    "file": "parser.cpp",
+    "fileloc": 62,
+    "instructions": 50,
+    "loads": {
+      "L": 4
+    },
+    "name": "hls_get_coordinate",
+    "total_instructions": 420
+  }
+}

@@ -1,0 +1,168 @@
+{
+    "1": {
+        "name": "gps_translation_Pipeline_VITIS_LOOP_132_1",
+        "file": "\/ecel\/UFAD\/mark.gross\/fnn-gps\/gps-parser\/parser.cpp",
+        "fileloc": "132",
+        "instructions": "18",
+        "total_instructions": "18",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "1"
+        },
+        "stores": {
+            "G": "1",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "hls_get_coordinate",
+        "file": "parser.cpp",
+        "fileloc": "62",
+        "instructions": "21",
+        "total_instructions": "258",
+        "calls": "6 7 7 7 6",
+        "basicblocks": "1",
+        "loads": {
+            "G": "1"
+        }
+    },
+    "3": {
+        "name": "gps_translation_Pipeline_VITIS_LOOP_23_1",
+        "file": "\/ecel\/UFAD\/mark.gross\/fnn-gps\/gps-parser\/parser.cpp",
+        "fileloc": "127",
+        "instructions": "24",
+        "total_instructions": "24",
+        "calls": "",
+        "basicblocks": "5",
+        "loads": {
+            "G": "2",
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "hls_get_coordinate",
+        "file": "parser.cpp",
+        "fileloc": "62",
+        "instructions": "21",
+        "total_instructions": "258",
+        "calls": "6 7 7 7 6",
+        "basicblocks": "1",
+        "loads": {
+            "G": "1"
+        }
+    },
+    "0": {
+        "name": "gps_translation",
+        "file": "parser.cpp",
+        "fileloc": "113",
+        "instructions": "105",
+        "total_instructions": "1066",
+        "calls": "8 3 1 6 6 7 7 7 7 7 7 4 2",
+        "basicblocks": "8",
+        "loads": {
+            "G": "1"
+        },
+        "stores": {
+            "G": "1"
+        }
+    },
+    "5": {
+        "name": "hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2",
+        "file": "\/ecel\/UFAD\/mark.gross\/fnn-gps\/gps-parser\/parser.cpp",
+        "fileloc": "48",
+        "instructions": "21",
+        "total_instructions": "21",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "hls_get_field_from_nmea",
+        "file": "parser.cpp",
+        "fileloc": "43",
+        "instructions": "24",
+        "total_instructions": "45",
+        "calls": "5",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "hls_atoi_w_len",
+        "file": "parser.cpp",
+        "fileloc": "3",
+        "instructions": "10",
+        "total_instructions": "49",
+        "calls": "9",
+        "basicblocks": "1",
+        "loads": {
+            "L": "2"
+        }
+    },
+    "8": {
+        "name": "gps_translation_Pipeline_shift_loop",
+        "file": "\/ecel\/UFAD\/mark.gross\/fnn-gps\/gps-parser\/parser.cpp",
+        "fileloc": "121",
+        "instructions": "19",
+        "total_instructions": "19",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "1"
+        },
+        "stores": {
+            "G": "1",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1",
+        "file": "\/ecel\/UFAD\/mark.gross\/fnn-gps\/gps-parser\/parser.cpp",
+        "fileloc": "6",
+        "instructions": "39",
+        "total_instructions": "39",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

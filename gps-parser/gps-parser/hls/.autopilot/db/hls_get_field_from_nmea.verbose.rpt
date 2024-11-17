@@ -1,0 +1,825 @@
+
+
+================================================================
+== Vitis HLS Report for 'hls_get_field_from_nmea'
+================================================================
+* Date:           Sat Nov 16 22:45:36 2024
+
+* Version:        2023.2.1 (Build 4070103 on Dec 13 2023)
+* Project:        gps-parser
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  0.10 us|  6.803 ns|    27.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------------------------------+--------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                            |                                                  |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                          Instance                          |                      Module                      |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +------------------------------------------------------------+--------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2_fu_44  |hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +------------------------------------------------------------+--------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- VITIS_LOOP_51_1  |        ?|        ?|         ?|          -|          -|  1 ~ 9|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    114|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|     133|    178|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     43|    -|
+|Register         |        -|    -|     148|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     281|    335|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------------------------+--------------------------------------------------+---------+----+-----+-----+-----+
+    |                          Instance                          |                      Module                      | BRAM_18K| DSP|  FF | LUT | URAM|
+    +------------------------------------------------------------+--------------------------------------------------+---------+----+-----+-----+-----+
+    |grp_hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2_fu_44  |hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2  |        0|   0|  133|  178|    0|
+    +------------------------------------------------------------+--------------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                       |                                                  |        0|   0|  133|  178|    0|
+    +------------------------------------------------------------+--------------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln57_fu_106_p2    |         +|   0|  0|  71|          64|          64|
+    |i_2_fu_92_p2          |         +|   0|  0|  13|           4|           1|
+    |icmp_ln51_1_fu_87_p2  |      icmp|   0|  0|  13|           4|           4|
+    |icmp_ln51_fu_52_p2    |      icmp|   0|  0|  13|           4|           1|
+    |select_ln51_fu_58_p3  |    select|   0|  0|   4|           1|           4|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0| 114|          77|          74|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------+----+-----------+-----+-----------+
+    |    Name    | LUT| Input Size| Bits| Total Bits|
+    +------------+----+-----------+-----+-----------+
+    |ap_NS_fsm   |  25|          5|    1|          5|
+    |i_fu_30     |   9|          2|    4|          8|
+    |idx2_fu_26  |   9|          2|   64|        128|
+    +------------+----+-----------+-----+-----------+
+    |Total       |  43|          9|   69|        141|
+    +------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                   Name                                  | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------------------------------+----+----+-----+-----------+
+    |add_ln51_loc_fu_34                                                       |  64|   0|   64|          0|
+    |ap_CS_fsm                                                                |   4|   0|    4|          0|
+    |grp_hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2_fu_44_ap_start_reg  |   1|   0|    1|          0|
+    |i_fu_30                                                                  |   4|   0|    4|          0|
+    |idx2_fu_26                                                               |  64|   0|   64|          0|
+    |select_ln51_reg_136                                                      |   4|   0|    4|          0|
+    |trunc_ln51_reg_144                                                       |   7|   0|    7|          0|
+    +-------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                    | 148|   0|  148|          0|
+    +-------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+-------------------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  |      Source Object      |    C Type    |
++---------------------+-----+-----+------------+-------------------------+--------------+
+|ap_clk               |   in|    1|  ap_ctrl_hs|  hls_get_field_from_nmea|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|  hls_get_field_from_nmea|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|  hls_get_field_from_nmea|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|  hls_get_field_from_nmea|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|  hls_get_field_from_nmea|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|  hls_get_field_from_nmea|  return value|
+|ap_return            |  out|    7|  ap_ctrl_hs|  hls_get_field_from_nmea|  return value|
+|fieldnum             |   in|    4|     ap_none|                 fieldnum|        scalar|
+|stored_msg_address0  |  out|    7|   ap_memory|               stored_msg|         array|
+|stored_msg_ce0       |  out|    1|   ap_memory|               stored_msg|         array|
+|stored_msg_q0        |   in|    8|   ap_memory|               stored_msg|         array|
++---------------------+-----+-----+------------+-------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.75>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%idx2 = alloca i32 1"   --->   Operation 5 'alloca' 'idx2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:50]   --->   Operation 6 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%fieldnum_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %fieldnum"   --->   Operation 7 'read' 'fieldnum_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%add_ln51_loc = alloca i64 1"   --->   Operation 8 'alloca' 'add_ln51_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (1.73ns)   --->   "%icmp_ln51 = icmp_ne  i4 %fieldnum_read, i4 0" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51]   --->   Operation 9 'icmp' 'icmp_ln51' <Predicate = true> <Delay = 1.73> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (1.02ns)   --->   "%select_ln51 = select i1 %icmp_ln51, i4 %fieldnum_read, i4 1" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51]   --->   Operation 10 'select' 'select_ln51' <Predicate = true> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (1.58ns)   --->   "%store_ln50 = store i4 0, i4 %i" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:50]   --->   Operation 11 'store' 'store_ln50' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 12 [1/1] (1.58ns)   --->   "%store_ln0 = store i64 0, i64 %idx2"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln51 = br void %VITIS_LOOP_53_2" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51]   --->   Operation 13 'br' 'br_ln51' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.32>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%idx2_load = load i64 %idx2" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51]   --->   Operation 14 'load' 'idx2_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%i_1 = load i4 %i" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51]   --->   Operation 15 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%trunc_ln51 = trunc i64 %idx2_load" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51]   --->   Operation 16 'trunc' 'trunc_ln51' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (1.73ns)   --->   "%icmp_ln51_1 = icmp_eq  i4 %i_1, i4 %select_ln51" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51]   --->   Operation 17 'icmp' 'icmp_ln51_1' <Predicate = true> <Delay = 1.73> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 9, i64 0"   --->   Operation 18 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (1.73ns)   --->   "%i_2 = add i4 %i_1, i4 1" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51]   --->   Operation 19 'add' 'i_2' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln51 = br i1 %icmp_ln51_1, void %VITIS_LOOP_53_2.split, void %for.end13" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51]   --->   Operation 20 'br' 'br_ln51' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [2/2] (0.00ns)   --->   "%call_ln51 = call void @hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2, i7 %trunc_ln51, i64 %add_ln51_loc, i8 %stored_msg" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51]   --->   Operation 21 'call' 'call_ln51' <Predicate = (!icmp_ln51_1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 22 [1/1] (1.58ns)   --->   "%store_ln50 = store i4 %i_2, i4 %i" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:50]   --->   Operation 22 'store' 'store_ln50' <Predicate = (!icmp_ln51_1)> <Delay = 1.58>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%ret_ln59 = ret i7 %trunc_ln51" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:59]   --->   Operation 23 'ret' 'ret_ln59' <Predicate = (icmp_ln51_1)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 5.21>
+ST_3 : Operation 24 [1/2] (5.21ns)   --->   "%call_ln51 = call void @hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2, i7 %trunc_ln51, i64 %add_ln51_loc, i8 %stored_msg" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51]   --->   Operation 24 'call' 'call_ln51' <Predicate = true> <Delay = 5.21> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 5.10>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%specloopname_ln51 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51]   --->   Operation 25 'specloopname' 'specloopname_ln51' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%add_ln51_loc_load = load i64 %add_ln51_loc"   --->   Operation 26 'load' 'add_ln51_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (3.52ns)   --->   "%add_ln57 = add i64 %add_ln51_loc_load, i64 %idx2_load" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:57]   --->   Operation 27 'add' 'add_ln57' <Predicate = true> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 28 [1/1] (1.58ns)   --->   "%store_ln57 = store i64 %add_ln57, i64 %idx2" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:57]   --->   Operation 28 'store' 'store_ln57' <Predicate = true> <Delay = 1.58>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln51 = br void %VITIS_LOOP_53_2" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51]   --->   Operation 29 'br' 'br_ln51' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ fieldnum]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ stored_msg]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+idx2                  (alloca           ) [ 01111]
+i                     (alloca           ) [ 01111]
+fieldnum_read         (read             ) [ 00000]
+add_ln51_loc          (alloca           ) [ 00111]
+icmp_ln51             (icmp             ) [ 00000]
+select_ln51           (select           ) [ 00111]
+store_ln50            (store            ) [ 00000]
+store_ln0             (store            ) [ 00000]
+br_ln51               (br               ) [ 00000]
+idx2_load             (load             ) [ 00011]
+i_1                   (load             ) [ 00000]
+trunc_ln51            (trunc            ) [ 00010]
+icmp_ln51_1           (icmp             ) [ 00111]
+speclooptripcount_ln0 (speclooptripcount) [ 00000]
+i_2                   (add              ) [ 00000]
+br_ln51               (br               ) [ 00000]
+store_ln50            (store            ) [ 00000]
+ret_ln59              (ret              ) [ 00000]
+call_ln51             (call             ) [ 00000]
+specloopname_ln51     (specloopname     ) [ 00000]
+add_ln51_loc_load     (load             ) [ 00000]
+add_ln57              (add              ) [ 00000]
+store_ln57            (store            ) [ 00000]
+br_ln51               (br               ) [ 00000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="fieldnum">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="fieldnum"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="stored_msg">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stored_msg"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1001" name="const_4">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i4"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopTripCount"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopName"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_8"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1004" name="idx2_fu_26">
+<pin_list>
+<pin id="27" dir="0" index="0" bw="1" slack="0"/>
+<pin id="28" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="idx2/1 "/>
+</bind>
+</comp>
+
+<comp id="30" class="1004" name="i_fu_30">
+<pin_list>
+<pin id="31" dir="0" index="0" bw="1" slack="0"/>
+<pin id="32" dir="1" index="1" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="i/1 "/>
+</bind>
+</comp>
+
+<comp id="34" class="1004" name="add_ln51_loc_fu_34">
+<pin_list>
+<pin id="35" dir="0" index="0" bw="1" slack="0"/>
+<pin id="36" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="add_ln51_loc/1 "/>
+</bind>
+</comp>
+
+<comp id="38" class="1004" name="fieldnum_read_read_fu_38">
+<pin_list>
+<pin id="39" dir="0" index="0" bw="4" slack="0"/>
+<pin id="40" dir="0" index="1" bw="4" slack="0"/>
+<pin id="41" dir="1" index="2" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="fieldnum_read/1 "/>
+</bind>
+</comp>
+
+<comp id="44" class="1004" name="grp_hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2_fu_44">
+<pin_list>
+<pin id="45" dir="0" index="0" bw="0" slack="0"/>
+<pin id="46" dir="0" index="1" bw="7" slack="0"/>
+<pin id="47" dir="0" index="2" bw="64" slack="1"/>
+<pin id="48" dir="0" index="3" bw="8" slack="0"/>
+<pin id="49" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln51/2 "/>
+</bind>
+</comp>
+
+<comp id="52" class="1004" name="icmp_ln51_fu_52">
+<pin_list>
+<pin id="53" dir="0" index="0" bw="4" slack="0"/>
+<pin id="54" dir="0" index="1" bw="4" slack="0"/>
+<pin id="55" dir="1" index="2" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln51/1 "/>
+</bind>
+</comp>
+
+<comp id="58" class="1004" name="select_ln51_fu_58">
+<pin_list>
+<pin id="59" dir="0" index="0" bw="1" slack="0"/>
+<pin id="60" dir="0" index="1" bw="4" slack="0"/>
+<pin id="61" dir="0" index="2" bw="4" slack="0"/>
+<pin id="62" dir="1" index="3" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opcode="select(49) " fcode="select"/>
+<opset="select_ln51/1 "/>
+</bind>
+</comp>
+
+<comp id="66" class="1004" name="store_ln50_store_fu_66">
+<pin_list>
+<pin id="67" dir="0" index="0" bw="1" slack="0"/>
+<pin id="68" dir="0" index="1" bw="4" slack="0"/>
+<pin id="69" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln50/1 "/>
+</bind>
+</comp>
+
+<comp id="71" class="1004" name="store_ln0_store_fu_71">
+<pin_list>
+<pin id="72" dir="0" index="0" bw="1" slack="0"/>
+<pin id="73" dir="0" index="1" bw="64" slack="0"/>
+<pin id="74" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="76" class="1004" name="idx2_load_load_fu_76">
+<pin_list>
+<pin id="77" dir="0" index="0" bw="64" slack="1"/>
+<pin id="78" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="idx2_load/2 "/>
+</bind>
+</comp>
+
+<comp id="79" class="1004" name="i_1_load_fu_79">
+<pin_list>
+<pin id="80" dir="0" index="0" bw="4" slack="1"/>
+<pin id="81" dir="1" index="1" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="i_1/2 "/>
+</bind>
+</comp>
+
+<comp id="82" class="1004" name="trunc_ln51_fu_82">
+<pin_list>
+<pin id="83" dir="0" index="0" bw="64" slack="0"/>
+<pin id="84" dir="1" index="1" bw="7" slack="0"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="trunc_ln51/2 "/>
+</bind>
+</comp>
+
+<comp id="87" class="1004" name="icmp_ln51_1_fu_87">
+<pin_list>
+<pin id="88" dir="0" index="0" bw="4" slack="0"/>
+<pin id="89" dir="0" index="1" bw="4" slack="1"/>
+<pin id="90" dir="1" index="2" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln51_1/2 "/>
+</bind>
+</comp>
+
+<comp id="92" class="1004" name="i_2_fu_92">
+<pin_list>
+<pin id="93" dir="0" index="0" bw="4" slack="0"/>
+<pin id="94" dir="0" index="1" bw="1" slack="0"/>
+<pin id="95" dir="1" index="2" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="i_2/2 "/>
+</bind>
+</comp>
+
+<comp id="98" class="1004" name="store_ln50_store_fu_98">
+<pin_list>
+<pin id="99" dir="0" index="0" bw="4" slack="0"/>
+<pin id="100" dir="0" index="1" bw="4" slack="1"/>
+<pin id="101" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln50/2 "/>
+</bind>
+</comp>
+
+<comp id="103" class="1004" name="add_ln51_loc_load_load_fu_103">
+<pin_list>
+<pin id="104" dir="0" index="0" bw="64" slack="3"/>
+<pin id="105" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="add_ln51_loc_load/4 "/>
+</bind>
+</comp>
+
+<comp id="106" class="1004" name="add_ln57_fu_106">
+<pin_list>
+<pin id="107" dir="0" index="0" bw="64" slack="0"/>
+<pin id="108" dir="0" index="1" bw="64" slack="2147483647"/>
+<pin id="109" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln57/4 "/>
+</bind>
+</comp>
+
+<comp id="111" class="1004" name="store_ln57_store_fu_111">
+<pin_list>
+<pin id="112" dir="0" index="0" bw="64" slack="0"/>
+<pin id="113" dir="0" index="1" bw="64" slack="3"/>
+<pin id="114" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln57/4 "/>
+</bind>
+</comp>
+
+<comp id="116" class="1005" name="idx2_reg_116">
+<pin_list>
+<pin id="117" dir="0" index="0" bw="64" slack="0"/>
+<pin id="118" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opset="idx2 "/>
+</bind>
+</comp>
+
+<comp id="123" class="1005" name="i_reg_123">
+<pin_list>
+<pin id="124" dir="0" index="0" bw="4" slack="0"/>
+<pin id="125" dir="1" index="1" bw="4" slack="0"/>
+</pin_list>
+<bind>
+<opset="i "/>
+</bind>
+</comp>
+
+<comp id="130" class="1005" name="add_ln51_loc_reg_130">
+<pin_list>
+<pin id="131" dir="0" index="0" bw="64" slack="1"/>
+<pin id="132" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="add_ln51_loc "/>
+</bind>
+</comp>
+
+<comp id="136" class="1005" name="select_ln51_reg_136">
+<pin_list>
+<pin id="137" dir="0" index="0" bw="4" slack="1"/>
+<pin id="138" dir="1" index="1" bw="4" slack="1"/>
+</pin_list>
+<bind>
+<opset="select_ln51 "/>
+</bind>
+</comp>
+
+<comp id="144" class="1005" name="trunc_ln51_reg_144">
+<pin_list>
+<pin id="145" dir="0" index="0" bw="7" slack="1"/>
+<pin id="146" dir="1" index="1" bw="7" slack="1"/>
+</pin_list>
+<bind>
+<opset="trunc_ln51 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="29"><net_src comp="4" pin="0"/><net_sink comp="26" pin=0"/></net>
+
+<net id="33"><net_src comp="4" pin="0"/><net_sink comp="30" pin=0"/></net>
+
+<net id="37"><net_src comp="8" pin="0"/><net_sink comp="34" pin=0"/></net>
+
+<net id="42"><net_src comp="6" pin="0"/><net_sink comp="38" pin=0"/></net>
+
+<net id="43"><net_src comp="0" pin="0"/><net_sink comp="38" pin=1"/></net>
+
+<net id="50"><net_src comp="20" pin="0"/><net_sink comp="44" pin=0"/></net>
+
+<net id="51"><net_src comp="2" pin="0"/><net_sink comp="44" pin=3"/></net>
+
+<net id="56"><net_src comp="38" pin="2"/><net_sink comp="52" pin=0"/></net>
+
+<net id="57"><net_src comp="10" pin="0"/><net_sink comp="52" pin=1"/></net>
+
+<net id="63"><net_src comp="52" pin="2"/><net_sink comp="58" pin=0"/></net>
+
+<net id="64"><net_src comp="38" pin="2"/><net_sink comp="58" pin=1"/></net>
+
+<net id="65"><net_src comp="12" pin="0"/><net_sink comp="58" pin=2"/></net>
+
+<net id="70"><net_src comp="10" pin="0"/><net_sink comp="66" pin=0"/></net>
+
+<net id="75"><net_src comp="14" pin="0"/><net_sink comp="71" pin=0"/></net>
+
+<net id="85"><net_src comp="76" pin="1"/><net_sink comp="82" pin=0"/></net>
+
+<net id="86"><net_src comp="82" pin="1"/><net_sink comp="44" pin=1"/></net>
+
+<net id="91"><net_src comp="79" pin="1"/><net_sink comp="87" pin=0"/></net>
+
+<net id="96"><net_src comp="79" pin="1"/><net_sink comp="92" pin=0"/></net>
+
+<net id="97"><net_src comp="12" pin="0"/><net_sink comp="92" pin=1"/></net>
+
+<net id="102"><net_src comp="92" pin="2"/><net_sink comp="98" pin=0"/></net>
+
+<net id="110"><net_src comp="103" pin="1"/><net_sink comp="106" pin=0"/></net>
+
+<net id="115"><net_src comp="106" pin="2"/><net_sink comp="111" pin=0"/></net>
+
+<net id="119"><net_src comp="26" pin="1"/><net_sink comp="116" pin=0"/></net>
+
+<net id="120"><net_src comp="116" pin="1"/><net_sink comp="71" pin=1"/></net>
+
+<net id="121"><net_src comp="116" pin="1"/><net_sink comp="76" pin=0"/></net>
+
+<net id="122"><net_src comp="116" pin="1"/><net_sink comp="111" pin=1"/></net>
+
+<net id="126"><net_src comp="30" pin="1"/><net_sink comp="123" pin=0"/></net>
+
+<net id="127"><net_src comp="123" pin="1"/><net_sink comp="66" pin=1"/></net>
+
+<net id="128"><net_src comp="123" pin="1"/><net_sink comp="79" pin=0"/></net>
+
+<net id="129"><net_src comp="123" pin="1"/><net_sink comp="98" pin=1"/></net>
+
+<net id="133"><net_src comp="34" pin="1"/><net_sink comp="130" pin=0"/></net>
+
+<net id="134"><net_src comp="130" pin="1"/><net_sink comp="44" pin=2"/></net>
+
+<net id="135"><net_src comp="130" pin="1"/><net_sink comp="103" pin=0"/></net>
+
+<net id="139"><net_src comp="58" pin="3"/><net_sink comp="136" pin=0"/></net>
+
+<net id="140"><net_src comp="136" pin="1"/><net_sink comp="87" pin=1"/></net>
+
+<net id="147"><net_src comp="82" pin="1"/><net_sink comp="144" pin=0"/></net>
+
+<net id="148"><net_src comp="144" pin="1"/><net_sink comp="44" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: stored_msg | {}
+ - Input state : 
+	Port: hls_get_field_from_nmea : fieldnum | {1 }
+	Port: hls_get_field_from_nmea : stored_msg | {2 3 }
+  - Chain level:
+	State 1
+		select_ln51 : 1
+		store_ln50 : 1
+		store_ln0 : 1
+	State 2
+		trunc_ln51 : 1
+		icmp_ln51_1 : 1
+		i_2 : 1
+		br_ln51 : 2
+		call_ln51 : 2
+		store_ln50 : 2
+		ret_ln59 : 2
+	State 3
+	State 4
+		add_ln57 : 1
+		store_ln57 : 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|------------------------------------------------------------|---------|---------|---------|
+| Operation|                       Functional Unit                      |  Delay  |    FF   |   LUT   |
+|----------|------------------------------------------------------------|---------|---------|---------|
+|   call   | grp_hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2_fu_44 |  1.588  |   142   |   126   |
+|----------|------------------------------------------------------------|---------|---------|---------|
+|    add   |                          i_2_fu_92                         |    0    |    0    |    13   |
+|          |                       add_ln57_fu_106                      |    0    |    0    |    71   |
+|----------|------------------------------------------------------------|---------|---------|---------|
+|   icmp   |                       icmp_ln51_fu_52                      |    0    |    0    |    13   |
+|          |                      icmp_ln51_1_fu_87                     |    0    |    0    |    13   |
+|----------|------------------------------------------------------------|---------|---------|---------|
+|  select  |                      select_ln51_fu_58                     |    0    |    0    |    4    |
+|----------|------------------------------------------------------------|---------|---------|---------|
+|   read   |                  fieldnum_read_read_fu_38                  |    0    |    0    |    0    |
+|----------|------------------------------------------------------------|---------|---------|---------|
+|   trunc  |                      trunc_ln51_fu_82                      |    0    |    0    |    0    |
+|----------|------------------------------------------------------------|---------|---------|---------|
+|   Total  |                                                            |  1.588  |   142   |   240   |
+|----------|------------------------------------------------------------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++--------------------+--------+
+|                    |   FF   |
++--------------------+--------+
+|add_ln51_loc_reg_130|   64   |
+|      i_reg_123     |    4   |
+|    idx2_reg_116    |   64   |
+| select_ln51_reg_136|    4   |
+| trunc_ln51_reg_144 |    7   |
++--------------------+--------+
+|        Total       |   143  |
++--------------------+--------+
+
+* Multiplexer (MUX) list: 
+|------------------------------------------------------------|------|------|------|--------||---------||---------|
+|                            Comp                            |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|------------------------------------------------------------|------|------|------|--------||---------||---------|
+| grp_hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2_fu_44 |  p1  |   2  |   7  |   14   ||    9    |
+|------------------------------------------------------------|------|------|------|--------||---------||---------|
+|                            Total                           |      |      |      |   14   ||  1.588  ||    9    |
+|------------------------------------------------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    1   |   142  |   240  |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    1   |    -   |    9   |
+|  Register |    -   |   143  |    -   |
++-----------+--------+--------+--------+
+|   Total   |    3   |   285  |   249  |
++-----------+--------+--------+--------+

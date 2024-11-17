@@ -1,0 +1,228 @@
+
+
+================================================================
+== Synthesis Summary Report of 'gps_translation'
+================================================================
++ General Information: 
+    * Date:           Sat Nov 16 22:45:37 2024
+    * Version:        2023.2.1 (Build 4070103 on Dec 13 2023)
+    * Project:        gps-parser
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+----------+-----------+------------+-----+
+    |                         Modules                        | Issue|       | Latency |  Latency  | Iteration|         | Trip |          |      |          |           |            |     |
+    |                         & Loops                        | Type | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |     FF    |     LUT    | URAM|
+    +--------------------------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+----------+-----------+------------+-----+
+    |+ gps_translation                                       |     -|   3.07|        -|          -|         -|        -|     -|        no|     -|  29 (13%)|  2480 (2%)|  5636 (10%)|    -|
+    | + gps_translation_Pipeline_shift_loop                  |     -|  67.22|       83|  8.300e+03|         -|       83|     -|        no|     -|         -|   17 (~0%)|    66 (~0%)|    -|
+    |  o shift_loop                                          |     -|  73.00|       81|  8.100e+03|         2|        1|    81|       yes|     -|         -|          -|           -|    -|
+    | + gps_translation_Pipeline_VITIS_LOOP_23_1             |     -|  67.17|        9|    900.000|         -|        9|     -|        no|     -|         -|   18 (~0%)|   106 (~0%)|    -|
+    |  o VITIS_LOOP_23_1                                     |    II|  73.00|        7|    700.000|         2|        2|     3|       yes|     -|         -|          -|           -|    -|
+    | + gps_translation_Pipeline_VITIS_LOOP_132_1            |     -|  67.95|       84|  8.400e+03|         -|       84|     -|        no|     -|         -|   17 (~0%)|    66 (~0%)|    -|
+    |  o VITIS_LOOP_132_1                                    |     -|  73.00|       82|  8.200e+03|         2|        1|    82|       yes|     -|         -|          -|           -|    -|
+    | + hls_get_field_from_nmea                              |     -|  66.20|        -|          -|         -|        -|     -|        no|     -|         -|  281 (~0%)|   335 (~0%)|    -|
+    |  o VITIS_LOOP_51_1                                     |     -|  73.00|        -|          -|         -|        -|     -|        no|     -|         -|          -|           -|    -|
+    |   + hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2   |     -|  66.20|        -|          -|         -|        -|     -|        no|     -|         -|  133 (~0%)|   178 (~0%)|    -|
+    |    o VITIS_LOOP_53_2                                   |    II|  73.00|        -|          -|         2|        2|     -|       yes|     -|         -|          -|           -|    -|
+    | + hls_atoi_w_len                                       |     -|  62.11|        -|          -|         -|        -|     -|        no|     -|         -|   47 (~0%)|   330 (~0%)|    -|
+    |  + hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1              |     -|  62.11|        -|          -|         -|        -|     -|        no|     -|         -|   43 (~0%)|   239 (~0%)|    -|
+    |   o VITIS_LOOP_8_1                                     |    II|  73.00|        -|          -|         2|        2|     -|       yes|     -|         -|          -|           -|    -|
+    | + hls_get_coordinate                                   |     -|   3.07|        -|          -|         -|        -|     -|        no|     -|    3 (1%)|  563 (~0%)|   1311 (2%)|    -|
+    |  + hls_get_field_from_nmea                             |     -|  66.20|        -|          -|         -|        -|     -|        no|     -|         -|  281 (~0%)|   335 (~0%)|    -|
+    |   o VITIS_LOOP_51_1                                    |     -|  73.00|        -|          -|         -|        -|     -|        no|     -|         -|          -|           -|    -|
+    |    + hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2  |     -|  66.20|        -|          -|         -|        -|     -|        no|     -|         -|  133 (~0%)|   178 (~0%)|    -|
+    |     o VITIS_LOOP_53_2                                  |    II|  73.00|        -|          -|         2|        2|     -|       yes|     -|         -|          -|           -|    -|
+    |  + hls_atoi_w_len                                      |     -|  62.11|        -|          -|         -|        -|     -|        no|     -|         -|   47 (~0%)|   330 (~0%)|    -|
+    |   + hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1             |     -|  62.11|        -|          -|         -|        -|     -|        no|     -|         -|   43 (~0%)|   239 (~0%)|    -|
+    |    o VITIS_LOOP_8_1                                    |    II|  73.00|        -|          -|         2|        2|     -|       yes|     -|         -|          -|           -|    -|
+    | + hls_get_coordinate_1                                 |     -|   3.07|        -|          -|         -|        -|     -|        no|     -|    3 (1%)|  563 (~0%)|   1317 (2%)|    -|
+    |  + hls_get_field_from_nmea                             |     -|  66.20|        -|          -|         -|        -|     -|        no|     -|         -|  281 (~0%)|   335 (~0%)|    -|
+    |   o VITIS_LOOP_51_1                                    |     -|  73.00|        -|          -|         -|        -|     -|        no|     -|         -|          -|           -|    -|
+    |    + hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2  |     -|  66.20|        -|          -|         -|        -|     -|        no|     -|         -|  133 (~0%)|   178 (~0%)|    -|
+    |     o VITIS_LOOP_53_2                                  |    II|  73.00|        -|          -|         2|        2|     -|       yes|     -|         -|          -|           -|    -|
+    |  + hls_atoi_w_len                                      |     -|  62.11|        -|          -|         -|        -|     -|        no|     -|         -|   47 (~0%)|   330 (~0%)|    -|
+    |   + hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1             |     -|  62.11|        -|          -|         -|        -|     -|        no|     -|         -|   43 (~0%)|   239 (~0%)|    -|
+    |    o VITIS_LOOP_8_1                                    |    II|  73.00|        -|          -|         2|        2|     -|       yes|     -|         -|          -|           -|    -|
+    +--------------------------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+----------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++-----------+-----------+---------------+-------+--------+--------+
+| Interface | Direction | Register Mode | TDATA | TREADY | TVALID |
++-----------+-----------+---------------+-------+--------+--------+
+| msg       | in        | both          | 8     | 1      | 1      |
++-----------+-----------+---------------+-------+--------+--------+
+
+* Other Ports
++------------+---------+-----------+----------+
+| Port       | Mode    | Direction | Bitwidth |
++------------+---------+-----------+----------+
+| data_valid | ap_vld  | out       | 1        |
+| gd         | ap_vld  | out       | 320      |
+| pps        | ap_none | in        | 1        |
++------------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst_n  | reset      | ap_rst_n                          |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+------------------+
+| Argument   | Direction | Datatype         |
++------------+-----------+------------------+
+| msg        | in        | stream<char, 0>& |
+| pps        | in        | ap_uint<1>       |
+| gd         | out       | gnss_data_t&     |
+| data_valid | out       | ap_uint<1>&      |
++------------+-----------+------------------+
+
+* SW-to-HW Mapping
++------------+-------------------+-----------+
+| Argument   | HW Interface      | HW Type   |
++------------+-------------------+-----------+
+| msg        | msg               | interface |
+| pps        | pps               | port      |
+| gd         | gd                | port      |
+| gd         | gd_ap_vld         | port      |
+| data_valid | data_valid        | port      |
+| data_valid | data_valid_ap_vld | port      |
++------------+-------------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------------------------------------------------------------------------------+-----+--------+------------+------+--------+---------+
+| Name                                                                                                               | DSP | Pragma | Variable   | Op   | Impl   | Latency |
++--------------------------------------------------------------------------------------------------------------------+-----+--------+------------+------+--------+---------+
+| + gps_translation                                                                                                  | 29  |        |            |      |        |         |
+|   add_ln141_fu_313_p2                                                                                              |     |        | add_ln141  | add  | fabric | 0       |
+|   add_ln142_fu_353_p2                                                                                              |     |        | add_ln142  | add  | fabric | 0       |
+|   add_ln144_fu_385_p2                                                                                              |     |        | add_ln144  | add  | fabric | 0       |
+|   add_ln145_fu_391_p2                                                                                              |     |        | add_ln145  | add  | fabric | 0       |
+|   y_fu_397_p2                                                                                                      |     |        | y          | add  | fabric | 0       |
+|   sub_ln35_fu_418_p2                                                                                               |     |        | sub_ln35   | sub  | fabric | 0       |
+|   add_ln36_fu_432_p2                                                                                               |     |        | add_ln36   | add  | fabric | 0       |
+|   mul_32s_34ns_65_1_1_U36                                                                                          | 4   |        | mul_ln36   | mul  | auto   | 0       |
+|   sub_ln36_fu_451_p2                                                                                               |     |        | sub_ln36   | sub  | fabric | 0       |
+|   sub_ln36_1_fu_501_p2                                                                                             |     |        | sub_ln36_1 | sub  | fabric | 0       |
+|   mul_26s_10s_32_1_1_U37                                                                                           | 1   |        | mul_ln37   | mul  | auto   | 0       |
+|   yoe_fu_522_p2                                                                                                    |     |        | yoe        | add  | fabric | 0       |
+|   mul_ln38_fu_279_p0                                                                                               |     |        | add_ln38   | add  | fabric | 0       |
+|   mul_32s_9ns_32_1_1_U33                                                                                           | 2   |        | mul_ln38   | mul  | auto   | 0       |
+|   add_ln38_1_fu_548_p2                                                                                             |     |        | add_ln38_1 | add  | fabric | 0       |
+|   mul_32ns_34ns_65_1_1_U31                                                                                         | 4   |        | mul_ln38_1 | mul  | auto   | 0       |
+|   mul_32s_10ns_32_1_1_U34                                                                                          | 2   |        | mul_ln39   | mul  | auto   | 0       |
+|   mul_32ns_34ns_65_1_1_U32                                                                                         | 4   |        | mul_ln39_1 | mul  | auto   | 0       |
+|   mul_26s_19ns_32_1_1_U30                                                                                          | 2   |        | mul_ln40   | mul  | auto   | 0       |
+|   add_ln39_1_fu_606_p2                                                                                             |     |        | add_ln39_1 | add  | fabric | 0       |
+|   add_ln39_2_fu_611_p2                                                                                             |     |        | add_ln39_2 | add  | fabric | 0       |
+|   mul_32s_18ns_32_1_1_U35                                                                                          | 2   |        | mul_ln151  | mul  | auto   | 0       |
+|  + gps_translation_Pipeline_shift_loop                                                                             | 0   |        |            |      |        |         |
+|    add_ln122_fu_72_p2                                                                                              |     |        | add_ln122  | add  | fabric | 0       |
+|  + gps_translation_Pipeline_VITIS_LOOP_23_1                                                                        | 0   |        |            |      |        |         |
+|    add_ln23_fu_94_p2                                                                                               |     |        | add_ln23   | add  | fabric | 0       |
+|    add_ln24_fu_109_p2                                                                                              |     |        | add_ln24   | add  | fabric | 0       |
+|  + gps_translation_Pipeline_VITIS_LOOP_132_1                                                                       | 0   |        |            |      |        |         |
+|    add_ln132_fu_75_p2                                                                                              |     |        | add_ln132  | add  | fabric | 0       |
+|  + hls_get_field_from_nmea (grp_hls_get_field_from_nmea_fu_234)                                                    | 0   |        |            |      |        |         |
+|    i_2_fu_92_p2                                                                                                    |     |        | i_2        | add  | fabric | 0       |
+|    add_ln57_fu_106_p2                                                                                              |     |        | add_ln57   | add  | fabric | 0       |
+|    + hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2 (grp_hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2_fu_44) | 0   |        |            |      |        |         |
+|      ptr_fu_74_p2                                                                                                  |     |        | ptr        | add  | fabric | 0       |
+|      add_ln51_out                                                                                                  |     |        | add_ln51   | add  | fabric | 0       |
+|  + hls_atoi_w_len (grp_hls_atoi_w_len_fu_243)                                                                      | 0   |        |            |      |        |         |
+|    sub_ln16_fu_54_p2                                                                                               |     |        | sub_ln16   | sub  | fabric | 0       |
+|    + hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1 (grp_hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1_fu_36)                     | 0   |        |            |      |        |         |
+|      add_ln8_fu_124_p2                                                                                             |     |        | add_ln8    | add  | fabric | 0       |
+|      add_ln8_1_fu_152_p2                                                                                           |     |        | add_ln8_1  | add  | fabric | 0       |
+|      add_ln13_1_fu_182_p2                                                                                          |     |        | add_ln13_1 | add  | fabric | 0       |
+|  + hls_get_coordinate                                                                                              | 3   |        |            |      |        |         |
+|    add_ln77_fu_103_p2                                                                                              |     |        | add_ln77   | add  | fabric | 0       |
+|    add_ln78_fu_110_p2                                                                                              |     |        | add_ln78   | add  | fabric | 0       |
+|    fmul_32ns_32ns_32_1_max_dsp_1_U20                                                                               | 3   |        | deg_4      | fmul | maxdsp | 0       |
+|   + hls_get_field_from_nmea (grp_hls_get_field_from_nmea_fu_43)                                                    | 0   |        |            |      |        |         |
+|     i_2_fu_92_p2                                                                                                   |     |        | i_2        | add  | fabric | 0       |
+|     add_ln57_fu_106_p2                                                                                             |     |        | add_ln57   | add  | fabric | 0       |
+|    + hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2 (grp_hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2_fu_44) | 0   |        |            |      |        |         |
+|      ptr_fu_74_p2                                                                                                  |     |        | ptr        | add  | fabric | 0       |
+|      add_ln51_out                                                                                                  |     |        | add_ln51   | add  | fabric | 0       |
+|   + hls_atoi_w_len (grp_hls_atoi_w_len_fu_52)                                                                      | 0   |        |            |      |        |         |
+|     sub_ln16_fu_54_p2                                                                                              |     |        | sub_ln16   | sub  | fabric | 0       |
+|    + hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1 (grp_hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1_fu_36)                     | 0   |        |            |      |        |         |
+|      add_ln8_fu_124_p2                                                                                             |     |        | add_ln8    | add  | fabric | 0       |
+|      add_ln8_1_fu_152_p2                                                                                           |     |        | add_ln8_1  | add  | fabric | 0       |
+|      add_ln13_1_fu_182_p2                                                                                          |     |        | add_ln13_1 | add  | fabric | 0       |
+|  + hls_get_coordinate_1                                                                                            | 3   |        |            |      |        |         |
+|    add_ln94_fu_106_p2                                                                                              |     |        | add_ln94   | add  | fabric | 0       |
+|    add_ln95_fu_113_p2                                                                                              |     |        | add_ln95   | add  | fabric | 0       |
+|    fmul_32ns_32ns_32_1_max_dsp_1_U26                                                                               | 3   |        | deg_2      | fmul | maxdsp | 0       |
+|   + hls_get_field_from_nmea (grp_hls_get_field_from_nmea_fu_45)                                                    | 0   |        |            |      |        |         |
+|     i_2_fu_92_p2                                                                                                   |     |        | i_2        | add  | fabric | 0       |
+|     add_ln57_fu_106_p2                                                                                             |     |        | add_ln57   | add  | fabric | 0       |
+|    + hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2 (grp_hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2_fu_44) | 0   |        |            |      |        |         |
+|      ptr_fu_74_p2                                                                                                  |     |        | ptr        | add  | fabric | 0       |
+|      add_ln51_out                                                                                                  |     |        | add_ln51   | add  | fabric | 0       |
+|   + hls_atoi_w_len (grp_hls_atoi_w_len_fu_54)                                                                      | 0   |        |            |      |        |         |
+|     sub_ln16_fu_54_p2                                                                                              |     |        | sub_ln16   | sub  | fabric | 0       |
+|    + hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1 (grp_hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1_fu_36)                     | 0   |        |            |      |        |         |
+|      add_ln8_fu_124_p2                                                                                             |     |        | add_ln8    | add  | fabric | 0       |
+|      add_ln8_1_fu_152_p2                                                                                           |     |        | add_ln8_1  | add  | fabric | 0       |
+|      add_ln13_1_fu_182_p2                                                                                          |     |        | add_ln13_1 | add  | fabric | 0       |
++--------------------------------------------------------------------------------------------------------------------+-----+--------+------------+------+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++---------------------------------------------+---------+------+------+------+--------+------------+------+---------+------------------+
+| Name                                        | Usage   | Type | BRAM | URAM | Pragma | Variable   | Impl | Latency | Bitwidth, Depth, |
+|                                             |         |      |      |      |        |            |      |         | Banks            |
++---------------------------------------------+---------+------+------+------+--------+------------+------+---------+------------------+
+| + gps_translation                           |         |      | 0    | 0    |        |            |      |         |                  |
+|   msg_shift_U                               | ram_s2p |      |      |      |        | msg_shift  | auto | 1       | 8, 82, 1         |
+|   stored_msg_U                              | ram_1p  |      |      |      |        | stored_msg | auto | 1       | 8, 82, 1         |
+|  + gps_translation_Pipeline_VITIS_LOOP_23_1 |         |      | 0    | 0    |        |            |      |         |                  |
+|    p_str_U                                  | rom_1p  |      |      |      |        | p_str      | auto | 1       | 8, 4, 1          |
++---------------------------------------------+---------+------+------+------+--------+------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++----------------------+--------------------+------------------------------------------+
+| Type                 | Options            | Location                                 |
++----------------------+--------------------+------------------------------------------+
+| inline               | OFF                | parser.cpp:5 in hls_atoi_w_len           |
+| inline               | OFF                | parser.cpp:45 in hls_get_field_from_nmea |
+| inline               | OFF                | parser.cpp:64 in hls_get_coordinate      |
+| function_instantiate | variable = cnum    | parser.cpp:65 in hls_get_coordinate      |
+| interface            | mode=axis port=msg | parser.cpp:114 in gps_translation, msg   |
++----------------------+--------------------+------------------------------------------+
+
+

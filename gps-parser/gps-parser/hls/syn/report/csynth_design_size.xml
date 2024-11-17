@@ -1,0 +1,57 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">, 4068, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll, 1389, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,   920, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,   648, user inline pragmas are applied</column>
+            <column name="">(4) simplification,   625, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition,   627, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,   633, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,   753, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,   707, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,   700, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,   630, loop and instruction simplification</column>
+            <column name="">(2) parallelization,   628, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,   628, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,   628, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,   642, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,   734, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="gps_translation" col1="parser.cpp:113" col2="4068" col3="625" col4="700" col5="628" col6="734">
+                    <row id="5" col0="hls_strncmp" col1="parser.cpp:21" col2="62" col3="" col4="" col5="" col6=""/>
+                    <row id="3" col0="gnss_data_t" col1="parser.h:9" col2="141" col3="" col4="" col5="" col6=""/>
+                    <row id="1" col0="hls_get_field_from_nmea" col1="parser.cpp:43" col2="70" col2_disp="  70 (2 calls)" col3="36" col3_disp=" 36 (2 calls)" col4="38" col4_disp=" 38 (2 calls)" col5="34" col5_disp=" 34 (2 calls)" col6="48" col6_disp=" 48 (2 calls)"/>
+                    <row id="2" col0="hls_atoi_w_len" col1="parser.cpp:3" col2="258" col2_disp=" 258 (6 calls)" col3="156" col3_disp="156 (6 calls)" col4="168" col4_disp="168 (6 calls)" col5="156" col5_disp="156 (6 calls)" col6="180" col6_disp="180 (6 calls)"/>
+                    <row id="4" col0="hls_get_coordinate" col1="parser.cpp:62" col2="1014" col2_disp="1,014 (2 calls)" col3="268" col3_disp="268 (2 calls)" col4="284" col4_disp="284 (2 calls)" col5="264" col5_disp="264 (2 calls)" col6="320" col6_disp="320 (2 calls)">
+                        <row id="1" col0="hls_get_field_from_nmea" col1="parser.cpp:43" col2="280" col2_disp=" 280 (8 calls)" col3="72" col3_disp=" 72 (4 calls)" col4="76" col4_disp=" 76 (4 calls)" col5="68" col5_disp=" 68 (4 calls)" col6="96" col6_disp=" 96 (4 calls)"/>
+                        <row id="2" col0="hls_atoi_w_len" col1="parser.cpp:3" col2="516" col2_disp=" 516 (12 calls)" col3="156" col3_disp="156 (6 calls)" col4="168" col4_disp="168 (6 calls)" col5="156" col5_disp="156 (6 calls)" col6="180" col6_disp="180 (6 calls)"/>
+                    </row>
+                    <row id="6" col0="hls_days_from_civil" col1="parser.cpp:33" col2="1434" col3="" col4="" col5="" col6=""/>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

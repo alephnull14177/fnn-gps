@@ -1,0 +1,101 @@
+#-----------------------------------------------------------
+# xsim v2023.2.1 (64-bit)
+# SW Build 4081461 on Thu Dec 14 12:22:04 MST 2023
+# IP Build 4080415 on Thu Dec 14 21:01:57 MST 2023
+# SharedData Build 4077621 on Mon Dec 11 00:23:44 MST 2023
+# Start of session at: Sat Nov 16 22:47:03 2024
+# Process ID: 22116
+# Current directory: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/gps_translation/xsim_script.tcl}
+# Log file: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/sim/verilog/xsim.log
+# Journal file: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/sim/verilog/xsim.jou
+# Running On: ece-lnx-4511c, OS: Linux, CPU Frequency: 3192.499 MHz, CPU Physical cores: 12, Host memory: 135028 MB
+#-----------------------------------------------------------
+source xsim.dir/gps_translation/xsim_script.tcl
+# xsim {gps_translation} -autoloadwcfg -tclbatch {gps_translation.tcl}
+Time resolution is 1 ps
+source gps_translation.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 68 [n/a] @ "350000"
+// RTL Simulation : 1 / 68 [n/a] @ "9050000"
+// RTL Simulation : 2 / 68 [n/a] @ "17650000"
+// RTL Simulation : 3 / 68 [n/a] @ "26250000"
+// RTL Simulation : 4 / 68 [n/a] @ "34850000"
+// RTL Simulation : 5 / 68 [n/a] @ "43450000"
+// RTL Simulation : 6 / 68 [n/a] @ "52050000"
+// RTL Simulation : 7 / 68 [n/a] @ "60650000"
+// RTL Simulation : 8 / 68 [n/a] @ "69250000"
+// RTL Simulation : 9 / 68 [n/a] @ "77850000"
+// RTL Simulation : 10 / 68 [n/a] @ "86450000"
+// RTL Simulation : 11 / 68 [n/a] @ "95050000"
+// RTL Simulation : 12 / 68 [n/a] @ "103650000"
+// RTL Simulation : 13 / 68 [n/a] @ "112250000"
+// RTL Simulation : 14 / 68 [n/a] @ "120850000"
+// RTL Simulation : 15 / 68 [n/a] @ "129450000"
+// RTL Simulation : 16 / 68 [n/a] @ "138050000"
+// RTL Simulation : 17 / 68 [n/a] @ "146650000"
+// RTL Simulation : 18 / 68 [n/a] @ "155250000"
+// RTL Simulation : 19 / 68 [n/a] @ "163850000"
+// RTL Simulation : 20 / 68 [n/a] @ "172450000"
+// RTL Simulation : 21 / 68 [n/a] @ "181050000"
+// RTL Simulation : 22 / 68 [n/a] @ "189650000"
+// RTL Simulation : 23 / 68 [n/a] @ "198250000"
+// RTL Simulation : 24 / 68 [n/a] @ "206850000"
+// RTL Simulation : 25 / 68 [n/a] @ "215450000"
+// RTL Simulation : 26 / 68 [n/a] @ "224050000"
+// RTL Simulation : 27 / 68 [n/a] @ "232650000"
+// RTL Simulation : 28 / 68 [n/a] @ "241250000"
+// RTL Simulation : 29 / 68 [n/a] @ "249850000"
+// RTL Simulation : 30 / 68 [n/a] @ "258450000"
+// RTL Simulation : 31 / 68 [n/a] @ "267050000"
+// RTL Simulation : 32 / 68 [n/a] @ "275650000"
+// RTL Simulation : 33 / 68 [n/a] @ "284250000"
+// RTL Simulation : 34 / 68 [n/a] @ "292850000"
+// RTL Simulation : 35 / 68 [n/a] @ "301450000"
+// RTL Simulation : 36 / 68 [n/a] @ "310050000"
+// RTL Simulation : 37 / 68 [n/a] @ "318650000"
+// RTL Simulation : 38 / 68 [n/a] @ "327250000"
+// RTL Simulation : 39 / 68 [n/a] @ "335850000"
+// RTL Simulation : 40 / 68 [n/a] @ "344450000"
+// RTL Simulation : 41 / 68 [n/a] @ "353050000"
+// RTL Simulation : 42 / 68 [n/a] @ "361650000"
+// RTL Simulation : 43 / 68 [n/a] @ "370250000"
+// RTL Simulation : 44 / 68 [n/a] @ "378850000"
+// RTL Simulation : 45 / 68 [n/a] @ "387450000"
+// RTL Simulation : 46 / 68 [n/a] @ "396050000"
+// RTL Simulation : 47 / 68 [n/a] @ "404650000"
+// RTL Simulation : 48 / 68 [n/a] @ "413250000"
+// RTL Simulation : 49 / 68 [n/a] @ "421850000"
+// RTL Simulation : 50 / 68 [n/a] @ "430450000"
+// RTL Simulation : 51 / 68 [n/a] @ "439050000"
+// RTL Simulation : 52 / 68 [n/a] @ "447650000"
+// RTL Simulation : 53 / 68 [n/a] @ "456250000"
+// RTL Simulation : 54 / 68 [n/a] @ "464850000"
+// RTL Simulation : 55 / 68 [n/a] @ "473450000"
+// RTL Simulation : 56 / 68 [n/a] @ "482050000"
+// RTL Simulation : 57 / 68 [n/a] @ "490650000"
+// RTL Simulation : 58 / 68 [n/a] @ "499250000"
+// RTL Simulation : 59 / 68 [n/a] @ "507850000"
+// RTL Simulation : 60 / 68 [n/a] @ "516450000"
+// RTL Simulation : 61 / 68 [n/a] @ "525050000"
+// RTL Simulation : 62 / 68 [n/a] @ "533650000"
+// RTL Simulation : 63 / 68 [n/a] @ "542250000"
+// RTL Simulation : 64 / 68 [n/a] @ "550850000"
+// RTL Simulation : 65 / 68 [n/a] @ "559450000"
+// RTL Simulation : 66 / 68 [n/a] @ "568050000"
+// RTL Simulation : 67 / 68 [n/a] @ "576650000"
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 630450 ns  Iteration: 18  Process: /apatb_gps_translation_top/AESL_inst_gps_translation/fadd_32ns_32ns_32_2_full_dsp_1_U38/gps_translation_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/inst/i_synth/addsub_op/ADDSUB/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/i_no_versal_es1_workaround/DSP/prcs_opmode_drc  File: /tools/Xilinx/Vivado/2023.2/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+// RTL Simulation : 68 / 68 [n/a] @ "651650000"
+////////////////////////////////////////////////////////////////////////////////////
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 651750 ns  Iteration: 18  Process: /apatb_gps_translation_top/AESL_inst_gps_translation/fadd_32ns_32ns_32_2_full_dsp_1_U38/gps_translation_fadd_32ns_32ns_32_2_full_dsp_1_ip_u/inst/i_synth/addsub_op/ADDSUB/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/i_no_versal_es1_workaround/DSP/prcs_opmode_drc  File: /tools/Xilinx/Vivado/2023.2/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+$finish called at time : 652250 ns : File "/ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/sim/verilog/gps_translation.autotb.v" Line 382
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Nov 16 22:47:07 2024...

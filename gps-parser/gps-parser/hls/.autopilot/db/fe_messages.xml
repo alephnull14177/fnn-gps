@@ -1,0 +1,36 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:5:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_atoi_w_len" ARG_PragmaIsValid="1" ARG_PragmaOptions="OFF" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:45:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_get_field_from_nmea" ARG_PragmaIsValid="1" ARG_PragmaOptions="OFF" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:64:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_get_coordinate" ARG_PragmaIsValid="1" ARG_PragmaOptions="OFF" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:65:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hls_get_coordinate" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = cnum" ARG_PragmaType="function_instantiate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="gps_translation" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=gps_translation" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:114:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="gps_translation" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=msg" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_FUNCTION_INSTANTIATE" msg_id="214-367" msg_severity="INFO" msg_loc="/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:148:16" msg_body="Instantiating function 'hls_get_coordinate(char const*, ap_uint&lt;1&gt;)' to 'hls_get_coordinate(char const*, ap_uint&lt;1&gt;) (.28)' by setting 'cnum' to 'agg.tmp'">
+        <args Name="islist {hls_get_coordinate(char const*, ap_uint&lt;1&gt;)} {hls_get_coordinate(char const*, ap_uint&lt;1&gt;) (.28)}"/>
+    </msg>
+    <msg msg_groups="PRAGMA_FUNCTION_INSTANTIATE" msg_id="214-367" msg_severity="INFO" msg_loc="/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:149:17" msg_body="Instantiating function 'hls_get_coordinate(char const*, ap_uint&lt;1&gt;)' to 'hls_get_coordinate(char const*, ap_uint&lt;1&gt;) (.29)' by setting 'cnum' to 'agg.tmp51'">
+        <args Name="islist {hls_get_coordinate(char const*, ap_uint&lt;1&gt;)} {hls_get_coordinate(char const*, ap_uint&lt;1&gt;) (.29)}"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:113:0" msg_body="Inlining function 'hls_strncmp(char*, char const*, unsigned char)' into 'gps_translation(hls::stream&lt;char, 0&gt;&amp;, ap_uint&lt;1&gt;, gnss_data_t&amp;, ap_uint&lt;1&gt;&amp;)'">
+        <args Callee="hls_strncmp(char*, char const*, unsigned char)" Callee-DebugLoc="File /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp Line 22 Column 0" Caller="gps_translation(hls::stream&lt;char, 0&gt;&amp;, ap_uint&lt;1&gt;, gnss_data_t&amp;, ap_uint&lt;1&gt;&amp;)" Caller-DebugLoc="File /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp Line 113 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:113:0" msg_body="Inlining function 'hls_days_from_civil(ap_int&lt;32&gt;, unsigned int, unsigned int)' into 'gps_translation(hls::stream&lt;char, 0&gt;&amp;, ap_uint&lt;1&gt;, gnss_data_t&amp;, ap_uint&lt;1&gt;&amp;)'">
+        <args Callee="hls_days_from_civil(ap_int&lt;32&gt;, unsigned int, unsigned int)" Callee-DebugLoc="File /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp Line 34 Column 0" Caller="gps_translation(hls::stream&lt;char, 0&gt;&amp;, ap_uint&lt;1&gt;, gnss_data_t&amp;, ap_uint&lt;1&gt;&amp;)" Caller-DebugLoc="File /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp Line 113 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:113:0" msg_body="Aggregating scalar variable 'gd' with compact=bit mode in 320-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="320" HwTyName="scalar" Name="gd"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

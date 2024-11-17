@@ -1,0 +1,269 @@
+<stg><name>hls_atoi_w_len</name>
+
+
+<trans_list>
+
+<trans id="15" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="16" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="3" op_0_bw="3" op_1_bw="3">
+<![CDATA[
+entry:0 %n_read = read i3 @_ssdm_op_Read.ap_auto.i3, i3 %n
+
+]]></Node>
+<StgValue><ssdm name="n_read"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="7" op_0_bw="7" op_1_bw="7">
+<![CDATA[
+entry:1 %s_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %s
+
+]]></Node>
+<StgValue><ssdm name="s_read"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="1" op_0_bw="64">
+<![CDATA[
+entry:2 %is_neg_loc = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="is_neg_loc"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="32" op_0_bw="64">
+<![CDATA[
+entry:3 %res_loc = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="res_loc"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="0" op_0_bw="0" op_1_bw="7" op_2_bw="3" op_3_bw="32" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+entry:4 %call_ln0 = call void @hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1, i7 %s_read, i3 %n_read, i32 %res_loc, i1 %is_neg_loc, i8 %stored_msg
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="9" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="0" op_0_bw="0" op_1_bw="7" op_2_bw="3" op_3_bw="32" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+entry:4 %call_ln0 = call void @hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1, i7 %s_read, i3 %n_read, i32 %res_loc, i1 %is_neg_loc, i8 %stored_msg
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="10" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="32" op_0_bw="32" op_1_bw="0">
+<![CDATA[
+entry:5 %res_loc_load = load i32 %res_loc
+
+]]></Node>
+<StgValue><ssdm name="res_loc_load"/></StgValue>
+</operation>
+
+<operation id="11" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="1" op_0_bw="1" op_1_bw="0">
+<![CDATA[
+entry:6 %is_neg_loc_load = load i1 %is_neg_loc
+
+]]></Node>
+<StgValue><ssdm name="is_neg_loc_load"/></StgValue>
+</operation>
+
+<operation id="12" st_id="3" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:7 %sub_ln16 = sub i32 0, i32 %res_loc_load
+
+]]></Node>
+<StgValue><ssdm name="sub_ln16"/></StgValue>
+</operation>
+
+<operation id="13" st_id="3" stage="1" lat="1">
+<core>Sel</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+entry:8 %res = select i1 %is_neg_loc_load, i32 %sub_ln16, i32 %res_loc_load
+
+]]></Node>
+<StgValue><ssdm name="res"/></StgValue>
+</operation>
+
+<operation id="14" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="0" op_0_bw="32">
+<![CDATA[
+entry:9 %ret_ln18 = ret i32 %res
+
+]]></Node>
+<StgValue><ssdm name="ret_ln18"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="17" name="s" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s"/></StgValue>
+</port>
+<port id="18" name="n" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="n"/></StgValue>
+</port>
+<port id="19" name="stored_msg" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="stored_msg"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="21" from="_ssdm_op_Read.ap_auto.i3" to="n_read" fromId="20" toId="4">
+</dataflow>
+<dataflow id="22" from="n" to="n_read" fromId="18" toId="4">
+</dataflow>
+<dataflow id="24" from="_ssdm_op_Read.ap_auto.i7" to="s_read" fromId="23" toId="5">
+</dataflow>
+<dataflow id="25" from="s" to="s_read" fromId="17" toId="5">
+</dataflow>
+<dataflow id="27" from="StgValue_26" to="is_neg_loc" fromId="26" toId="6">
+</dataflow>
+<dataflow id="28" from="StgValue_26" to="res_loc" fromId="26" toId="7">
+</dataflow>
+<dataflow id="30" from="hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1" to="call_ln0" fromId="29" toId="8">
+</dataflow>
+<dataflow id="31" from="s_read" to="call_ln0" fromId="5" toId="8">
+</dataflow>
+<dataflow id="32" from="n_read" to="call_ln0" fromId="4" toId="8">
+</dataflow>
+<dataflow id="33" from="res_loc" to="call_ln0" fromId="7" toId="8">
+</dataflow>
+<dataflow id="34" from="is_neg_loc" to="call_ln0" fromId="6" toId="8">
+</dataflow>
+<dataflow id="35" from="stored_msg" to="call_ln0" fromId="19" toId="8">
+</dataflow>
+<dataflow id="36" from="hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1" to="call_ln0" fromId="29" toId="9">
+</dataflow>
+<dataflow id="37" from="s_read" to="call_ln0" fromId="5" toId="9">
+</dataflow>
+<dataflow id="38" from="n_read" to="call_ln0" fromId="4" toId="9">
+</dataflow>
+<dataflow id="39" from="res_loc" to="call_ln0" fromId="7" toId="9">
+</dataflow>
+<dataflow id="40" from="is_neg_loc" to="call_ln0" fromId="6" toId="9">
+</dataflow>
+<dataflow id="41" from="stored_msg" to="call_ln0" fromId="19" toId="9">
+</dataflow>
+<dataflow id="42" from="res_loc" to="res_loc_load" fromId="7" toId="10">
+</dataflow>
+<dataflow id="43" from="is_neg_loc" to="is_neg_loc_load" fromId="6" toId="11">
+</dataflow>
+<dataflow id="45" from="StgValue_44" to="sub_ln16" fromId="44" toId="12">
+</dataflow>
+<dataflow id="46" from="res_loc_load" to="sub_ln16" fromId="10" toId="12">
+</dataflow>
+<dataflow id="47" from="is_neg_loc_load" to="res" fromId="11" toId="13">
+</dataflow>
+<dataflow id="48" from="sub_ln16" to="res" fromId="12" toId="13">
+</dataflow>
+<dataflow id="49" from="res_loc_load" to="res" fromId="10" toId="13">
+</dataflow>
+<dataflow id="50" from="res" to="ret_ln18" fromId="13" toId="14">
+</dataflow>
+</dataflows>
+
+
+</stg>

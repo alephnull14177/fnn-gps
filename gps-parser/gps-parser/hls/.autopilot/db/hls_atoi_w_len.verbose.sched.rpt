@@ -1,0 +1,134 @@
+
+
+================================================================
+== Vitis HLS Report for 'hls_atoi_w_len'
+================================================================
+* Date:           Sat Nov 16 22:45:35 2024
+
+* Version:        2023.2.1 (Build 4070103 on Dec 13 2023)
+* Project:        gps-parser
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+-----------+------------+
+    |  Clock |  Target | Estimated | Uncertainty|
+    +--------+---------+-----------+------------+
+    |ap_clk  |  0.10 us|  10.894 ns|    27.00 ns|
+    +--------+---------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.19>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%n_read = read i3 @_ssdm_op_Read.ap_auto.i3, i3 %n"   --->   Operation 4 'read' 'n_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%s_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %s"   --->   Operation 5 'read' 's_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%is_neg_loc = alloca i64 1"   --->   Operation 6 'alloca' 'is_neg_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%res_loc = alloca i64 1"   --->   Operation 7 'alloca' 'res_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (4.19ns)   --->   "%call_ln0 = call void @hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1, i7 %s_read, i3 %n_read, i32 %res_loc, i1 %is_neg_loc, i8 %stored_msg"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 4.19> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 5.21>
+ST_2 : Operation 9 [1/2] (5.21ns)   --->   "%call_ln0 = call void @hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1, i7 %s_read, i3 %n_read, i32 %res_loc, i1 %is_neg_loc, i8 %stored_msg"   --->   Operation 9 'call' 'call_ln0' <Predicate = true> <Delay = 5.21> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 10 [1/1] (0.00ns)   --->   "%res_loc_load = load i32 %res_loc"   --->   Operation 10 'load' 'res_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 11 [1/1] (0.00ns)   --->   "%is_neg_loc_load = load i1 %is_neg_loc"   --->   Operation 11 'load' 'is_neg_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 12 [1/1] (2.55ns)   --->   "%sub_ln16 = sub i32 0, i32 %res_loc_load" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:16]   --->   Operation 12 'sub' 'sub_ln16' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 13 [1/1] (0.69ns)   --->   "%res = select i1 %is_neg_loc_load, i32 %sub_ln16, i32 %res_loc_load" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:15]   --->   Operation 13 'select' 'res' <Predicate = true> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 14 [1/1] (0.00ns)   --->   "%ret_ln18 = ret i32 %res" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:18]   --->   Operation 14 'ret' 'ret_ln18' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 100.000ns, clock uncertainty: 27.000ns.
+
+ <State 1>: 4.192ns
+The critical path consists of the following:
+	wire read operation ('n_read') on port 'n' [4]  (0.000 ns)
+	'call' operation 0 bit ('call_ln0') to 'hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1' [8]  (4.192 ns)
+
+ <State 2>: 5.215ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln0') to 'hls_atoi_w_len_Pipeline_VITIS_LOOP_8_1' [8]  (5.215 ns)
+
+ <State 3>: 3.250ns
+The critical path consists of the following:
+	'load' operation 32 bit ('res_loc_load') on local variable 'res_loc' [9]  (0.000 ns)
+	'sub' operation 32 bit ('sub_ln16', /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:16) [11]  (2.552 ns)
+	'select' operation 32 bit ('res', /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:15) [12]  (0.698 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

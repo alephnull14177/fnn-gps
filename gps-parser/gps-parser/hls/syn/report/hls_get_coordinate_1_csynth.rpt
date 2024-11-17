@@ -1,0 +1,175 @@
+
+
+================================================================
+== Vitis HLS Report for 'hls_get_coordinate_1'
+================================================================
+* Date:           Sat Nov 16 22:45:37 2024
+
+* Version:        2023.2.1 (Build 4070103 on Dec 13 2023)
+* Project:        gps-parser
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+-----------+------------+
+    |  Clock |  Target | Estimated | Uncertainty|
+    +--------+---------+-----------+------------+
+    |ap_clk  |  0.10 us|  69.927 ns|    27.00 ns|
+    +--------+---------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------+-------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                   |                         |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |              Instance             |          Module         |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-----------------------------------+-------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_hls_get_field_from_nmea_fu_45  |hls_get_field_from_nmea  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |grp_hls_atoi_w_len_fu_54           |hls_atoi_w_len           |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +-----------------------------------+-------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     75|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    3|     328|    985|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    257|    -|
+|Register         |        -|    -|     235|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    3|     563|   1317|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    1|      ~0|      2|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------+-------------------------------+---------+----+-----+-----+-----+
+    |              Instance             |             Module            | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-----------------------------------+-------------------------------+---------+----+-----+-----+-----+
+    |fmul_32ns_32ns_32_1_max_dsp_1_U26  |fmul_32ns_32ns_32_1_max_dsp_1  |        0|   3|    0|  320|    0|
+    |grp_hls_atoi_w_len_fu_54           |hls_atoi_w_len                 |        0|   0|   47|  330|    0|
+    |grp_hls_get_field_from_nmea_fu_45  |hls_get_field_from_nmea        |        0|   0|  281|  335|    0|
+    +-----------------------------------+-------------------------------+---------+----+-----+-----+-----+
+    |Total                              |                               |        0|   3|  328|  985|    0|
+    +-----------------------------------+-------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln94_fu_106_p2   |         +|   0|  0|  14|           7|           2|
+    |add_ln95_fu_113_p2   |         +|   0|  0|  14|           7|           3|
+    |icmp_ln99_fu_125_p2  |      icmp|   0|  0|  15|           8|           7|
+    |deg_2_fu_69_p1       |    select|   0|  0|  32|           1|          30|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  75|          23|          42|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------------+-----+-----------+-----+-----------+
+    |                    Name                    | LUT | Input Size| Bits| Total Bits|
+    +--------------------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                                   |  106|         21|    1|         21|
+    |ap_return                                   |    9|          2|   32|         64|
+    |grp_fu_73_p0                                |   14|          3|   32|         96|
+    |grp_fu_73_p1                                |   14|          3|   32|         96|
+    |grp_fu_79_p0                                |   20|          4|   32|        128|
+    |grp_hls_atoi_w_len_fu_54_n                  |   20|          4|    3|         12|
+    |grp_hls_atoi_w_len_fu_54_s                  |   20|          4|    7|         28|
+    |grp_hls_get_field_from_nmea_fu_45_fieldnum  |   14|          3|    4|         12|
+    |stored_msg_address0                         |   20|          4|    7|         28|
+    |stored_msg_ce0                              |   20|          4|    1|          4|
+    +--------------------------------------------+-----+-----------+-----+-----------+
+    |Total                                       |  257|         52|  151|        489|
+    +--------------------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------+----+----+-----+-----------+
+    |                      Name                      | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------+----+----+-----+-----------+
+    |add_ln94_reg_145                                |   7|   0|    7|          0|
+    |add_ln95_reg_155                                |   7|   0|    7|          0|
+    |ap_CS_fsm                                       |  20|   0|   20|          0|
+    |ap_return_preg                                  |  32|   0|   32|          0|
+    |grp_hls_atoi_w_len_fu_54_ap_start_reg           |   1|   0|    1|          0|
+    |grp_hls_get_field_from_nmea_fu_45_ap_start_reg  |   1|   0|    1|          0|
+    |reg_100                                         |  32|   0|   32|          0|
+    |reg_84                                          |   7|   0|    7|          0|
+    |reg_89                                          |  32|   0|   32|          0|
+    |reg_95                                          |  32|   0|   32|          0|
+    |tmp_1_reg_150                                   |  32|   0|   32|          0|
+    |tmp_reg_140                                     |  32|   0|   32|          0|
+    +------------------------------------------------+----+----+-----+-----------+
+    |Total                                           | 235|   0|  235|          0|
+    +------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+----------------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++---------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk               |   in|    1|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|ap_return            |  out|   32|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|grp_fu_792_p_din0    |  out|   32|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|grp_fu_792_p_din1    |  out|   32|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|grp_fu_792_p_opcode  |  out|    2|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|grp_fu_792_p_dout0   |   in|   32|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|grp_fu_792_p_ce      |  out|    1|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|grp_fu_796_p_din0    |  out|   32|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|grp_fu_796_p_din1    |  out|   32|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|grp_fu_796_p_dout0   |   in|   32|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|grp_fu_796_p_ce      |  out|    1|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|grp_fu_800_p_din0    |  out|   32|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|grp_fu_800_p_dout0   |   in|   32|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|grp_fu_800_p_ce      |  out|    1|  ap_ctrl_hs|  hls_get_coordinate.1|  return value|
+|stored_msg_address0  |  out|    7|   ap_memory|            stored_msg|         array|
+|stored_msg_ce0       |  out|    1|   ap_memory|            stored_msg|         array|
+|stored_msg_q0        |   in|    8|   ap_memory|            stored_msg|         array|
++---------------------+-----+-----+------------+----------------------+--------------+
+

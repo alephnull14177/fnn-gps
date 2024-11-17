@@ -1,0 +1,7 @@
+Running: xsim.dir/gps_translation/xsimk -simmode gui -wdb gps_translation.wdb -simrunnum 0 -socket 34528
+Design successfully loaded
+Design Loading Memory Usage: 39188 KB (Peak: 39188 KB)
+Design Loading CPU Usage: 20 ms
+Simulation completed
+Simulation Memory Usage: 129976 KB (Peak: 178460 KB)
+Simulation CPU Usage: 180 ms

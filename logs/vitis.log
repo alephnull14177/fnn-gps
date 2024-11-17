@@ -1,0 +1,90 @@
+16:22:03 INFO  : updated workspace path: /ecel/UFAD/mark.gross/fnn-gps
+16:22:03 INFO  : created .gitignore file for the project /ecel/UFAD/mark.gross/fnn-gps
+16:22:03 INFO  : updated workspace path: /ecel/UFAD/mark.gross/fnn-gps
+16:22:03 INFO  : bash, -c, source /tools/Xilinx/Vitis/2023.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2023.2/data/embeddedsw/scripts/pyesw//repo.py -st   /tools/Xilinx/Vitis/2023.2/data/embeddedsw && deactivate
+16:22:04 INFO  : Successfully created repository data at /ecel/UFAD/mark.gross/fnn-gps
+16:22:04 INFO  : bash, -c, source /tools/Xilinx/Vitis/2023.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2023.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_mark.gross18018032568975806152 -r /ecel/UFAD/mark.gross/fnn-gps/.repo.yaml && deactivate
+16:22:04 INFO  : Embedded Template List generated successfully
+16:22:04 INFO  : bash, -c, source /tools/Xilinx/Vitis/2023.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2023.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_mark.gross7399636239887341757 -r /ecel/UFAD/mark.gross/fnn-gps/.repo.yaml && deactivate
+16:22:04 INFO  : Embedded Template List generated successfully
+16:31:09 INFO  : created .gitignore file for the project /ecel/UFAD/mark.gross/fnn-gps/gps-parser
+02:00:01 INFO  : Terminating Vitis C++ Server
+02:00:01 INFO  : Vitis C++ Server terminated
+09:58:30 INFO  : updated workspace path: /ecel/UFAD/mark.gross/fnn-gps
+09:58:30 INFO  : created .gitignore file for the project /ecel/UFAD/mark.gross/fnn-gps
+09:58:30 INFO  : updated workspace path: /ecel/UFAD/mark.gross/fnn-gps
+09:58:30 INFO  : created .gitignore file for the project /ecel/UFAD/mark.gross/fnn-gps
+09:58:30 INFO  : bash, -c, source /tools/Xilinx/Vitis/2023.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2023.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_mark.gross12728041167224980891 -r /ecel/UFAD/mark.gross/fnn-gps/.repo.yaml && deactivate
+09:58:30 INFO  : Embedded Template List generated successfully
+09:58:30 INFO  : bash, -c, source /tools/Xilinx/Vitis/2023.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2023.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_mark.gross7169854219437254309 -r /ecel/UFAD/mark.gross/fnn-gps/.repo.yaml && deactivate
+09:58:30 INFO  : Embedded Template List generated successfully
+02:00:01 INFO  : Terminating Vitis C++ Server
+02:00:01 INFO  : Vitis C++ Server terminated
+18:31:48 INFO  : updated workspace path: /ecel/UFAD/mark.gross/fnn-gps
+18:31:48 INFO  : created .gitignore file for the project /ecel/UFAD/mark.gross/fnn-gps
+18:31:48 INFO  : updated workspace path: /ecel/UFAD/mark.gross/fnn-gps
+18:31:48 INFO  : bash, -c, source /tools/Xilinx/Vitis/2023.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2023.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_mark.gross12156312714109539751 -r /ecel/UFAD/mark.gross/fnn-gps/.repo.yaml && deactivate
+18:31:49 INFO  : Embedded Template List generated successfully
+18:31:49 INFO  : bash, -c, source /tools/Xilinx/Vitis/2023.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2023.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_mark.gross12336771371605491175 -r /ecel/UFAD/mark.gross/fnn-gps/.repo.yaml && deactivate
+18:31:49 INFO  : Embedded Template List generated successfully
+20:08:25 ERROR : Invalid project location 'null'.
+20:34:26 ERROR : Invalid project location 'null'.
+20:35:16 ERROR : Invalid project location 'null'.
+21:15:31 ERROR : Invalid project location 'null'.
+21:15:52 ERROR : Invalid project location 'null'.
+21:16:41 ERROR : Invalid project location 'null'.
+21:17:00 ERROR : Invalid project location 'null'.
+21:17:39 ERROR : Invalid project location 'null'.
+21:19:41 ERROR : Invalid project location 'null'.
+21:20:48 ERROR : Invalid project location 'null'.
+21:23:10 ERROR : Invalid project location 'null'.
+21:23:27 ERROR : Invalid project location 'null'.
+21:50:16 ERROR : Invalid project location 'null'.
+21:50:31 ERROR : Invalid project location 'null'.
+21:51:18 ERROR : Invalid project location 'null'.
+21:52:05 ERROR : Invalid project location 'null'.
+21:52:09 ERROR : Invalid project location 'null'.
+21:52:49 ERROR : Invalid project location 'null'.
+21:53:32 ERROR : Invalid project location 'null'.
+21:53:57 ERROR : Invalid project location 'null'.
+21:55:11 ERROR : Invalid project location 'null'.
+21:55:29 ERROR : Invalid project location 'null'.
+21:56:45 ERROR : Invalid project location 'null'.
+21:57:01 ERROR : Invalid project location 'null'.
+21:57:17 ERROR : Invalid project location 'null'.
+21:57:46 ERROR : Invalid project location 'null'.
+21:58:40 ERROR : Invalid project location 'null'.
+21:59:03 ERROR : Invalid project location 'null'.
+22:00:34 ERROR : Invalid project location 'null'.
+22:00:51 ERROR : Invalid project location 'null'.
+22:01:35 ERROR : Invalid project location 'null'.
+22:01:52 ERROR : Invalid project location 'null'.
+22:03:04 ERROR : Invalid project location 'null'.
+22:03:21 ERROR : Invalid project location 'null'.
+22:04:30 ERROR : Invalid project location 'null'.
+22:04:48 ERROR : Invalid project location 'null'.
+22:06:44 ERROR : Invalid project location 'null'.
+22:07:00 ERROR : Invalid project location 'null'.
+22:08:36 ERROR : Invalid project location 'null'.
+22:08:53 ERROR : Invalid project location 'null'.
+22:10:09 ERROR : Invalid project location 'null'.
+22:14:58 ERROR : Invalid project location 'null'.
+22:17:30 ERROR : Invalid project location 'null'.
+22:17:47 ERROR : Invalid project location 'null'.
+22:18:33 ERROR : Invalid project location 'null'.
+22:20:08 ERROR : Invalid project location 'null'.
+22:20:40 ERROR : Invalid project location 'null'.
+22:21:04 ERROR : Invalid project location 'null'.
+22:22:07 ERROR : Invalid project location 'null'.
+22:22:23 ERROR : Invalid project location 'null'.
+22:22:59 ERROR : Invalid project location 'null'.
+22:23:23 ERROR : Invalid project location 'null'.
+22:23:56 ERROR : Invalid project location 'null'.
+22:24:30 ERROR : Invalid project location 'null'.
+22:26:59 ERROR : Invalid project location 'null'.
+22:27:58 ERROR : Invalid project location 'null'.
+22:28:25 ERROR : Invalid project location 'null'.
+22:28:40 ERROR : Invalid project location 'null'.
+22:29:12 ERROR : Invalid project location 'null'.
+22:29:55 ERROR : Invalid project location 'null'.
+22:30:36 ERROR : Invalid project location 'null'.

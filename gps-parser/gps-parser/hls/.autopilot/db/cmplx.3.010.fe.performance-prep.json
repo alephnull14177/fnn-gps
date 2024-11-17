@@ -1,0 +1,66 @@
+{
+  "0": {
+    "basicblocks": 15,
+    "calls": "2 2 4 4 4 4 4 4 3 1",
+    "file": "parser.cpp",
+    "fileloc": 113,
+    "instructions": 170,
+    "loads": {
+      "G": 5
+    },
+    "name": "gps_translation",
+    "stores": {
+      "G": 3,
+      "T": 3
+    },
+    "total_instructions": 630
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "2 4 4 4 2",
+    "file": "parser.cpp",
+    "fileloc": 62,
+    "instructions": 20,
+    "loads": {
+      "L": 1
+    },
+    "name": "hls_get_coordinate",
+    "total_instructions": 132
+  },
+  "2": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "parser.cpp",
+    "fileloc": 43,
+    "instructions": 17,
+    "loads": {
+      "G": 1
+    },
+    "name": "hls_get_field_from_nmea",
+    "total_instructions": 17
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "2 4 4 4 2",
+    "file": "parser.cpp",
+    "fileloc": 62,
+    "instructions": 20,
+    "loads": {
+      "L": 1
+    },
+    "name": "hls_get_coordinate",
+    "total_instructions": 132
+  },
+  "4": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "parser.cpp",
+    "fileloc": 3,
+    "instructions": 26,
+    "loads": {
+      "L": 1
+    },
+    "name": "hls_atoi_w_len",
+    "total_instructions": 26
+  }
+}

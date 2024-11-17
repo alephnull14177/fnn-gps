@@ -1,0 +1,158 @@
+
+
+================================================================
+== Vitis HLS Report for 'hls_get_field_from_nmea_Pipeline_VITIS_LOOP_53_2'
+================================================================
+* Date:           Sat Nov 16 22:45:35 2024
+
+* Version:        2023.2.1 (Build 4070103 on Dec 13 2023)
+* Project:        gps-parser
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  0.10 us|  6.803 ns|    27.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_53_2  |        ?|        ?|         2|          2|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%idx = alloca i32 1"   --->   Operation 5 'alloca' 'idx' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%tmp = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %empty"   --->   Operation 6 'read' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (1.58ns)   --->   "%store_ln0 = store i64 0, i64 %idx"   --->   Operation 7 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.cond2"   --->   Operation 8 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 4.19>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%idx_load = load i64 %idx" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:48]   --->   Operation 9 'load' 'idx_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%trunc_ln48 = trunc i64 %idx_load" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:48]   --->   Operation 10 'trunc' 'trunc_ln48' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (1.87ns)   --->   "%ptr = add i7 %trunc_ln48, i7 %tmp" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:48]   --->   Operation 11 'add' 'ptr' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln48 = zext i7 %ptr" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:48]   --->   Operation 12 'zext' 'zext_ln48' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%stored_msg_addr = getelementptr i8 %stored_msg, i64 0, i64 %zext_ln48" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53]   --->   Operation 13 'getelementptr' 'stored_msg_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [2/2] (2.32ns)   --->   "%stored_msg_load = load i7 %stored_msg_addr" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53]   --->   Operation 14 'load' 'stored_msg_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 82> <RAM>
+
+State 3 <SV = 2> <Delay = 6.80>
+ST_3 : Operation 15 [1/2] (2.32ns)   --->   "%stored_msg_load = load i7 %stored_msg_addr" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53]   --->   Operation 15 'load' 'stored_msg_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 82> <RAM>
+ST_3 : Operation 16 [1/1] (3.52ns)   --->   "%add_ln51 = add i64 %idx_load, i64 1" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51]   --->   Operation 16 'add' 'add_ln51' <Predicate = true> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 17 [1/1] (1.91ns)   --->   "%empty_17 = icmp_eq  i8 %stored_msg_load, i8 44" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53]   --->   Operation 17 'icmp' 'empty_17' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 18 [1/1] (1.91ns)   --->   "%empty_18 = icmp_eq  i8 %stored_msg_load, i8 0" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53]   --->   Operation 18 'icmp' 'empty_18' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 19 [1/1] (0.97ns)   --->   "%empty_19 = or i1 %empty_18, i1 %empty_17" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53]   --->   Operation 19 'or' 'empty_19' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln53 = br i1 %empty_19, void %for.inc, void %for.inc11.exitStub" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53]   --->   Operation 20 'br' 'br_ln53' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%specpipeline_ln48 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_1" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:48]   --->   Operation 21 'specpipeline' 'specpipeline_ln48' <Predicate = (!empty_19)> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%specloopname_ln53 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53]   --->   Operation 22 'specloopname' 'specloopname_ln53' <Predicate = (!empty_19)> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (1.58ns)   --->   "%store_ln51 = store i64 %add_ln51, i64 %idx" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51]   --->   Operation 23 'store' 'store_ln51' <Predicate = (!empty_19)> <Delay = 1.58>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln53 = br void %for.cond2" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53]   --->   Operation 24 'br' 'br_ln53' <Predicate = (!empty_19)> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%write_ln51 = write void @_ssdm_op_Write.ap_auto.i64P0A, i64 %add_ln51_out, i64 %add_ln51" [/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51]   --->   Operation 25 'write' 'write_ln51' <Predicate = (empty_19)> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 26 'ret' 'ret_ln0' <Predicate = (empty_19)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 100.000ns, clock uncertainty: 27.000ns.
+
+ <State 1>: 1.588ns
+The critical path consists of the following:
+	'alloca' operation 64 bit ('idx') [4]  (0.000 ns)
+	'store' operation 0 bit ('store_ln0') of constant 0 on local variable 'idx' [6]  (1.588 ns)
+
+ <State 2>: 4.192ns
+The critical path consists of the following:
+	'load' operation 64 bit ('idx_load', /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:48) on local variable 'idx' [9]  (0.000 ns)
+	'add' operation 7 bit ('ptr', /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:48) [11]  (1.870 ns)
+	'getelementptr' operation 7 bit ('stored_msg_addr', /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53) [13]  (0.000 ns)
+	'load' operation 8 bit ('stored_msg_load', /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53) on array 'stored_msg' [14]  (2.322 ns)
+
+ <State 3>: 6.803ns
+The critical path consists of the following:
+	'load' operation 8 bit ('stored_msg_load', /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53) on array 'stored_msg' [14]  (2.322 ns)
+	'icmp' operation 1 bit ('empty_17', /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53) [16]  (1.915 ns)
+	'or' operation 1 bit ('empty_19', /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53) [18]  (0.978 ns)
+	'store' operation 0 bit ('store_ln51', /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51) of variable 'add_ln51', /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:51 on local variable 'idx' [23]  (1.588 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,3 @@
+relativeroot=/ecel/UFAD/mark.gross/fnn-gps/gps-parser
+original_argv=--mode hls --cosim --config /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg --work_dir gps-parser 
+

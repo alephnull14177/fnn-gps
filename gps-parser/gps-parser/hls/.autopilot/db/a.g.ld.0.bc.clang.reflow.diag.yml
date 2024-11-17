@@ -1,0 +1,183 @@
+--- !Passed
+Pass:            reflow-function-instantiate
+Name:            FunctionInstantiate
+DebugLoc:        { File: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp, 
+                   Line: 148, Column: 16 }
+Function:        _Z15gps_translationRN3hls6streamIcLi0EEE7ap_uintILi1EER11gnss_data_tRS4_
+Args:            
+  - String:          'Instantiating function '''
+  - Name:            'hls_get_coordinate(char const*, ap_uint<1>)'
+  - String:          ''' to '''
+  - Name:            'hls_get_coordinate(char const*, ap_uint<1>) (.28)'
+  - String:          ''' by setting '
+  - String:          '''cnum'' to ''agg.tmp'''
+...
+--- !Passed
+Pass:            reflow-function-instantiate
+Name:            FunctionInstantiate
+DebugLoc:        { File: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp, 
+                   Line: 149, Column: 17 }
+Function:        _Z15gps_translationRN3hls6streamIcLi0EEE7ap_uintILi1EER11gnss_data_tRS4_
+Args:            
+  - String:          'Instantiating function '''
+  - Name:            'hls_get_coordinate(char const*, ap_uint<1>)'
+  - String:          ''' to '''
+  - Name:            'hls_get_coordinate(char const*, ap_uint<1>) (.29)'
+  - String:          ''' by setting '
+  - String:          '''cnum'' to ''agg.tmp51'''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp, 
+                   Line: 113, Column: 0 }
+Function:        _Z15gps_translationRN3hls6streamIcLi0EEE7ap_uintILi1EER11gnss_data_tRS4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls_strncmp(char*, char const*, unsigned char)'
+    DebugLoc:        { File: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp, 
+                       Line: 22, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gps_translation(hls::stream<char, 0>&, ap_uint<1>, gnss_data_t&, ap_uint<1>&)'
+    DebugLoc:        { File: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp, 
+                       Line: 113, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp, 
+                   Line: 113, Column: 0 }
+Function:        _Z15gps_translationRN3hls6streamIcLi0EEE7ap_uintILi1EER11gnss_data_tRS4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls_days_from_civil(ap_int<32>, unsigned int, unsigned int)'
+    DebugLoc:        { File: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp, 
+                       Line: 34, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gps_translation(hls::stream<char, 0>&, ap_uint<1>, gnss_data_t&, ap_uint<1>&)'
+    DebugLoc:        { File: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp, 
+                       Line: 113, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp, 
+                   Line: 113, Column: 0 }
+Function:        _Z15gps_translationRN3hls6streamIcLi0EEE7ap_uintILi1EER11gnss_data_tRS4_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            gd
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '320'
+  - String:          '-bits'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp, 
+                   Line: 8, Column: 21 }
+Function:        _Z14hls_atoi_w_lenPch
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_8_1
+  - String:          ' '
+  - LoopLoc:         '/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:8:21'
+  - String:          ' '
+  - Function:        'hls_atoi_w_len(char*, unsigned char)'
+    DebugLoc:        { File: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp, 
+                       Line: 4, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp, 
+                   Line: 53, Column: 26 }
+Function:        _Z23hls_get_field_from_nmeaPKch
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_53_2
+  - String:          ' '
+  - LoopLoc:         '/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53:26'
+  - String:          ' '
+  - Function:        'hls_get_field_from_nmea(char const*, unsigned char)'
+    DebugLoc:        { File: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp, 
+                       Line: 44, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp, 
+                   Line: 23, Column: 22 }
+Function:        _Z15gps_translationRN3hls6streamIcLi0EEE7ap_uintILi1EER11gnss_data_tRS4_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_23_1
+  - String:          ' '
+  - LoopLoc:         '/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:23:22'
+  - String:          ' '
+  - Function:        'gps_translation(hls::stream<char, 0>&, ap_uint<1>, gnss_data_t&, ap_uint<1>&)'
+    DebugLoc:        { File: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp, 
+                       Line: 113, Column: 0 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_8_1
+  - String:          '> at '
+  - LoopLoc:         '/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:8:21'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_53_2
+  - String:          '> at '
+  - LoopLoc:         '/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:53:26'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        shift_loop
+  - String:          '> at '
+  - LoopLoc:         '/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:121:21'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_23_1
+  - String:          '> at '
+  - LoopLoc:         '/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:23:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_132_1
+  - String:          '> at '
+  - LoopLoc:         '/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:132:23'
+  - String:          ' '
+...

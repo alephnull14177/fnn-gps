@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# xsim v2023.2.1 (64-bit)
+# SW Build 4081461 on Thu Dec 14 12:22:04 MST 2023
+# IP Build 4080415 on Thu Dec 14 21:01:57 MST 2023
+# SharedData Build 4077621 on Mon Dec 11 00:23:44 MST 2023
+# Start of session at: Sat Nov 16 22:47:03 2024
+# Process ID: 22116
+# Current directory: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/gps_translation/xsim_script.tcl}
+# Log file: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/sim/verilog/xsim.log
+# Journal file: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/sim/verilog/xsim.jou
+# Running On: ece-lnx-4511c, OS: Linux, CPU Frequency: 3192.499 MHz, CPU Physical cores: 12, Host memory: 135028 MB
+#-----------------------------------------------------------
+source xsim.dir/gps_translation/xsim_script.tcl
+source gps_translation.tcl

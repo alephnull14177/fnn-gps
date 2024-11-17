@@ -1,0 +1,49 @@
+INFO: [v++ 60-1548] Creating build summary session with primary output /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/gps-parser.hlscompile_summary, at Sat Nov 16 19:09:17 2024
+INFO: [v++ 82-31] Launching vitis_hls: vitis_hls -nolog -run csynth -work_dir /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser -config /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg -cmdlineconfig /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2.1 (64-bit)
+  **** SW Build 4070103 on Dec 13 2023
+  **** IP Build 4080415 on Thu Dec 14 21:01:57 MST 2023
+  **** SharedData Build 4077621 on Mon Dec 11 00:23:44 MST 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2023.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'mark.gross' on host 'ece-lnx-4511c.ad.ufl.edu' (Linux_x86_64 version 3.10.0-1160.108.1.el7.x86_64) on Sat Nov 16 19:09:19 EST 2024
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.9 (Maipo)"
+INFO: [HLS 200-10] In directory '/ecel/UFAD/mark.gross/fnn-gps/gps-parser'
+INFO: [HLS 200-1909] Reading HLS ini file /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg
+INFO: [HLS 200-1909] Reading HLS ini file /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/config.cmdline
+INFO: [HLS 200-2005] Using work_dir /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser 
+WARNING: cannot remove old output: /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/.autopilot
+INFO: [HLS 200-1510] Running: open_project /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser -diskless 
+INFO: [HLS 200-1510] Running: open_solution hls 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: apply_ini /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg 
+INFO: [HLS 200-1909] Reading HLS ini file /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg
+INFO: [HLS 200-1465] Applying ini 'syn.file=parser.cpp' at /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=parser.h' at /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file '/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=gps_translation' at /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' at /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' at /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying ini 'clock=100' at /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 100ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' at /ecel/UFAD/mark.gross/fnn-gps/gps-parser/hls_config.cfg(5)
+INFO: [HLS 200-1510] Running: apply_ini /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/config.cmdline 
+INFO: [HLS 200-1909] Reading HLS ini file /ecel/UFAD/mark.gross/fnn-gps/gps-parser/gps-parser/hls/config.cmdline
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.1 seconds; current allocated memory: 390.555 MB.
+INFO: [HLS 200-10] Analyzing design file '/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp' ... 
+ERROR: [HLS 207-2359] conditional expression is ambiguous; 'ap_int<32>' can be converted to 'int' and vice versa (/ecel/UFAD/mark.gross/fnn-gps/gps-parser/parser.cpp:38:27)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.65 seconds. CPU system time: 0.19 seconds. Elapsed time: 0.91 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: close_project 
+ERROR:  
+INFO: [HLS 200-112] Total CPU user time: 2.85 seconds. Total CPU system time: 0.44 seconds. Total elapsed time: 3.41 seconds; peak allocated memory: 390.555 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Sat Nov 16 19:09:21 2024...
